@@ -46,7 +46,7 @@
                 </form>
 
                 <div>
-                    <img src="@/assets/logo.svg" alt="" />
+                    <img src="@/assets/branding/logo.svg" alt="" />
                 </div>
             </div>
         </section>
