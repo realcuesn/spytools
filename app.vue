@@ -1,13 +1,19 @@
 <template>
- <!--  <video class="h-screen object-cover w-full fixed top-0 brightness-75 saturate-50" autoplay muted playsinline loop
+  <video class="h-screen object-cover w-full fixed top-0 brightness-75 saturate-50" autoplay muted playsinline loop
     src="/gradient-loop.mp4"></video>
-  <div class="w-full relative">
+  <div v-if="isLoaded" class="w-full relative">
     <NuxtPage></NuxtPage>
     <SiteFooter></SiteFooter>
   </div>
+  <div v-else class="w-full h-screen relative flex items-center justify-center">
+    <div class="flex flex-col items-center gap-y-4">
+      <img src="@/assets/branding/logo.svg" class="h-12 w-12" alt="">
+      <h2 class="text-2xl font-semibold text-white">Loading...</h2>
+    </div>
+  </div>
 
   <SiteNav></SiteNav>
-  <SiteMenu v-if="menuState"></SiteMenu> -->
+  <SiteMenu v-if="menuState"></SiteMenu>
 </template>
 
 <script setup>
@@ -16,11 +22,14 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 const menuAnimateState = useState('menu-animate', () => false)
 const menuState = useState('menu', () => false)
+const bookmarks = useState('bookmarks', () => [])
 if (typeof window !== 'undefined') {
   gsap.registerPlugin(ScrollTrigger);
 }
 
-onMounted(() => {
+const isLoaded = ref(false)
+
+onMounted(async () => {
   const lenis = new Lenis()
 
   lenis.on('scroll', ScrollTrigger.update)
@@ -31,6 +40,23 @@ onMounted(() => {
 
   gsap.ticker.lagSmoothing(0)
 })
+
+onMounted(async () => {
+  const client = useSupabaseClient()
+  const user = useSupabaseUser()
+  if (user.value) {
+    let { data, error } = await client
+      .from('bookmarks')
+      .select('*')
+      .eq('user_id', user.value.id)
+    bookmarks.value = data
+    isLoaded.value = true
+  } else {
+    isLoaded.value = true
+  }
+
+})
+
 
 </script>
 

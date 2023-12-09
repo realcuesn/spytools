@@ -53,10 +53,19 @@
                             (productList[0].intro_description.length > 150 ? '...' : '') || 'Loading...' }}
                     </div>
                 </div>
+
+
+                <div class="absolute top-5 right-5">
+                    <img v-if="productList[0].isBookmarked" @click="toggleBookmark(productList[0].tool_id)"
+                        src="@/assets/icons/bookmark-active.svg" class="h-6 w-6 sm:h-10 sm:w-10" alt="">
+                    <img v-else @click="toggleBookmark(productList[0].tool_id)" src="@/assets/icons/bookmark-inactive.svg"
+                        class="h-6 w-6 sm:h-10 sm:w-10 " alt="">
+                </div>
+
             </li>
 
             <li
-                class="lg:w-[22rem] lg:min-w-[22rem] xl:w-[26rem] xl:min-w-[26rem] 2xl:w-[36rem]  2xl:min-w-[36rem] rounded-xl bg-[#141414] flex flex-col overflow-clip grid-rows-3">
+                class="lg:w-[22rem] lg:min-w-[22rem] xl:w-[26rem] xl:min-w-[26rem] 2xl:w-[36rem] relative  2xl:min-w-[36rem] rounded-xl bg-[#141414] flex flex-col overflow-clip grid-rows-3">
                 <div class="row-span-2 w-full">
                     <img :src="getImageUrl(productList[1].image)" class=" w-full aspect-video object-cover"
                         alt="Product Image">
@@ -88,11 +97,18 @@
                             (productList[1].intro_description.length > 150 ? '...' : '') || 'Loading...' }}
                     </div>
                 </div>
+
+                <div class="absolute top-5 right-5">
+                    <img v-if="productList[1].isBookmarked" @click="toggleBookmark(productList[1].tool_id)"
+                        src="@/assets/icons/bookmark-active.svg" class="h-6 w-6 sm:h-10 sm:w-10" alt="">
+                    <img v-else @click="toggleBookmark(productList[1].tool_id)" src="@/assets/icons/bookmark-inactive.svg"
+                        class="h-6 w-6 sm:h-10 sm:w-10 " alt="">
+                </div>
             </li>
 
 
             <li
-                class="lg:w-[22rem] lg:min-w-[22rem] xl:w-[26rem] xl:min-w-[26rem] 2xl:w-[36rem]  2xl:min-w-[36rem] rounded-xl bg-[#141414] flex flex-col overflow-clip grid-rows-3">
+                class="lg:w-[22rem] lg:min-w-[22rem] xl:w-[26rem] xl:min-w-[26rem] 2xl:w-[36rem] relative 2xl:min-w-[36rem] rounded-xl bg-[#141414] flex flex-col overflow-clip grid-rows-3">
                 <div class="row-span-2 w-full">
                     <img :src="getImageUrl(productList[2].image)
                         " class=" w-full aspect-video object-cover" alt="Product Image">
@@ -124,10 +140,17 @@
                             (productList[2].intro_description.length > 150 ? '...' : '') || 'Loading...' }}
                     </div>
                 </div>
+
+                <div class="absolute top-5 right-5">
+                    <img v-if="productList[2].isBookmarked" @click="toggleBookmark(productList[2].tool_id)"
+                        src="@/assets/icons/bookmark-active.svg" class="h-6 w-6 sm:h-10 sm:w-10" alt="">
+                    <img v-else @click="toggleBookmark(productList[2].tool_id)" src="@/assets/icons/bookmark-inactive.svg"
+                        class="h-6 w-6 sm:h-10 sm:w-10 " alt="">
+                </div>
             </li>
 
             <li
-                class="lg:w-[22rem] lg:min-w-[22rem] xl:w-[26rem] xl:min-w-[26rem] 2xl:w-[36rem]  2xl:min-w-[36rem] rounded-xl bg-[#141414] flex flex-col overflow-clip grid-rows-3">
+                class="lg:w-[22rem] lg:min-w-[22rem] xl:w-[26rem] xl:min-w-[26rem] 2xl:w-[36rem] relative 2xl:min-w-[36rem] rounded-xl bg-[#141414] flex flex-col overflow-clip grid-rows-3">
                 <div class="row-span-2 w-full">
                     <img :src="getImageUrl(productList[3].image)
                         " class=" w-full aspect-video object-cover" alt="Product Image">
@@ -158,6 +181,13 @@
                         {{ productList[3].intro_description.slice(0, 150) +
                             (productList[3].intro_description.length > 150 ? '...' : '') || 'Loading...' }}
                     </div>
+                </div>
+
+                <div class="absolute top-5 right-5">
+                    <img v-if="productList[3].isBookmarked" @click="toggleBookmark(productList[3].tool_id)"
+                        src="@/assets/icons/bookmark-active.svg" class="h-6 w-6 sm:h-10 sm:w-10" alt="">
+                    <img v-else @click="toggleBookmark(productList[3].tool_id)" src="@/assets/icons/bookmark-inactive.svg"
+                        class="h-6 w-6 sm:h-10 sm:w-10 " alt="">
                 </div>
             </li>
 
@@ -195,7 +225,7 @@
 
             <ul class="w-full overflow-auto pl-8 pt-8 grid grid-flow-col gap-x-6 items-center">
                 <li v-for="product in productList" v-if="productList.length > 0"
-                    class="w-[94vw] min-w-[94vw] rounded-xl bg-[#141414] flex h-full flex-col overflow-clip grid-rows-3">
+                    class="w-[94vw] min-w-[94vw] rounded-xl bg-[#141414] relative flex h-full flex-col overflow-clip grid-rows-3">
                     <div class="row-span-2 w-full">
                         <img :src="getImageUrl(product.image)" class=" w-full aspect-video object-cover"
                             alt="Product Image">
@@ -226,6 +256,12 @@
                                 (product.intro_description.length > 150 ? '...' : '') || 'Loading...' }}
                         </div>
                     </div>
+                    <div class="absolute top-5 right-5">
+                        <img v-if="product.isBookmarked" @click="toggleBookmark(product.tool_id)"
+                            src="@/assets/icons/bookmark-active.svg" class="h-6 w-6 sm:h-10 sm:w-10" alt="">
+                        <img v-else @click="toggleBookmark(product.tool_id)" src="@/assets/icons/bookmark-inactive.svg"
+                            class="h-6 w-6 sm:h-10 sm:w-10 " alt="">
+                    </div>
                 </li>
             </ul>
 
@@ -250,6 +286,9 @@ const container = ref(null)
 const scrollStuff = ref(null)
 const scrollProgress = ref(null);
 const imageEndUrlEndPoint = 'https://zzjfupocbypxhqvlygyf.supabase.co/storage/v1/object/public/'
+const bookmarks = useState('bookmarks')
+const client = useSupabaseClient()
+const user = useSupabaseUser()
 const getAvatarUrl = (avatar) => {
     //ii avatar has placehold.co in it, return it as it is
     if (avatar.includes('placehold.co')) {
@@ -261,13 +300,66 @@ const getAvatarUrl = (avatar) => {
 
 }
 
+const toggleBookmark = async (tool_id) => {
+    //now add the bookmark to the bookmarks array if it doesn't exist and also delete and remove it if it does exist and update the UI and also don't forget to update the supabase database also remember we use user_id propery which is the same as the user id in the supabase database.
+    if (bookmarks.value.includes(tool_id)) {
+        console.log('already bookmarked')
+        //remove the bookmark
+        bookmarks.value = bookmarks.value.filter((item) => item !== tool_id)
+        //now update the UI
+        productList.value = productList.value.map((item) => {
+            if (item.tool_id === tool_id) {
+                return {
+                    ...item,
+                    isBookmarked: false
+                }
+            } else {
+                return item
+            }
+        })
+
+
+        //now update the supabase database
+        const { data, error } = await client.from('bookmarks').delete().eq('tool_id', tool_id).eq('user_id', user.value.id)
+
+        if (error) {
+            console.log(error)
+        } else {
+            console.log(data)
+        }
+    } else {
+        console.log('not bookmarked')
+        //add the bookmark
+        bookmarks.value = [...bookmarks.value, tool_id]
+        //now update the UI
+        productList.value = productList.value.map((item) => {
+            if (item.tool_id === tool_id) {
+                return {
+                    ...item,
+                    isBookmarked: true
+                }
+            } else {
+                return item
+            }
+        })
+        //now update the supabase database
+        const { data, error } = await client.from('bookmarks').insert({
+            tool_id,
+            user_id: user.value.id
+        })
+        if (error) {
+            console.log(error)
+        } else {
+            console.log(data)
+        }
+    }
+}
 
 const getImageUrl = (image) => {
     //ii avatar has placehold.co in it, return it as it is
     if (image.includes('placehold.co')) {
         return image
     } else {
-        console.log(image)
         return `${imageEndUrlEndPoint}${image}`
     }
 
@@ -281,6 +373,8 @@ const productList = ref([
         intro_description: 'Loading...',
         image: 'https://placehold.co/600x400/EEE/31343C',
         avatar: 'https://placehold.co/600x400/EEE/31343C',
+        isBookmarked: false,
+        tool_id: 'Loading...'
     },
     {
         title: 'Loading...',
@@ -289,6 +383,8 @@ const productList = ref([
         intro_description: 'Loading...',
         image: 'https://placehold.co/600x400/EEE/31343C',
         avatar: 'https://placehold.co/600x400/EEE/31343C',
+        isBookmarked: false,
+        tool_id: 'Loading...'
     },
     {
         title: 'Loading...',
@@ -297,6 +393,8 @@ const productList = ref([
         intro_description: 'Loading...',
         image: 'https://placehold.co/600x400/EEE/31343C',
         avatar: 'https://placehold.co/600x400/EEE/31343C',
+        isBookmarked: false,
+        tool_id: 'Loading...'
     },
     {
         title: 'Loading...',
@@ -305,32 +403,57 @@ const productList = ref([
         intro_description: 'Loading...',
         image: 'https://placehold.co/600x400/EEE/31343C',
         avatar: 'https://placehold.co/600x400/EEE/31343C',
+        isBookmarked: false,
+        tool_id: 'Loading...'
 
     }
 ]);
 
 
 onMounted(async () => {
-    const client = useSupabaseClient()
+
     const res = await client.from('tools').select('*').limit(4)
     const data = ref(res.data);
+
+    //this is a funtion which takes in the tool_id from the bookmark and returns true or false
+    const checkBookmarked = (tool_id) => {
+        //useFind to check if the tool_id is in the bookmarks array
+        const isBookmarked = bookmarks.value.find((item) => {
+            if (item.tool_id == tool_id) {
+                return true
+            } else {
+                return false
+            }
+
+        })
+
+        if (isBookmarked) {
+            return true
+        } else {
+            return false
+        }
+    }
 
     const error = ref(res.error);
     if (error.value) {
         console.log(error)
     } else {
-        productList.value = data.value.map((item) => {
-            return {
-                title: item.title,
-                pricing_type: item.pricing_type,
-                url: item.url,
-                intro_description: item.intro_description,
-                image: item.image,
-                avatar: item.avatar
-            }
-        })
-        /*     productList.value.splice(0, productList.value.length, ...data.value);
-            console.log(productList.value) */
+        if (data.value.length >= 4) {
+            productList.value = data.value.map((item) => {
+                const isBookmarked = checkBookmarked(item.tool_id);
+                console.log(isBookmarked);
+                return {
+                    title: item.title,
+                    isBookmarked: isBookmarked,
+                    pricing_type: item.pricing_type,
+                    tool_id: item.tool_id,
+                    url: item.url,
+                    intro_description: item.intro_description,
+                    image: item.image,
+                    avatar: item.avatar
+                }
+            })
+        }
     }
 
 
