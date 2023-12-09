@@ -65,7 +65,7 @@ const registerGoogle = async () => {
     let { data, error } = await client.auth.signInWithOAuth({
         provider: 'google',
         options: {
-            redirectTo: 'http://localhost:3000/'
+            redirectTo: 'https://www.spytools.ai/'
         }
     })
     console.log(data)
