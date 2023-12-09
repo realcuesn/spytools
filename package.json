@@ -11,11 +11,27 @@
   },
   "devDependencies": {
     "@nuxt/devtools": "latest",
+    "@nuxtjs/supabase": "^1.1.4",
     "autoprefixer": "^10.4.16",
+    "install": "^0.13.0",
     "nuxt": "^3.8.2",
     "postcss": "^8.4.32",
+    "shadcn-nuxt": "^0.1.0",
     "tailwindcss": "^3.3.6",
+    "typescript": "^5.3.3",
     "vue": "^3.3.10",
     "vue-router": "^4.2.5"
+  },
+  "dependencies": {
+    "@nuxtjs/tailwindcss": "^6.10.1",
+    "@studio-freight/lenis": "^1.0.29",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.0.0",
+    "gsap": "^3.12.3",
+    "lucide-vue-next": "^0.294.0",
+    "radix-vue": "^1.2.4",
+    "tailwind-merge": "^2.1.0",
+    "tailwindcss-animate": "^1.0.7",
+    "vue-writer": "^1.2.0"
   }
 }
