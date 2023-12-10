@@ -6,7 +6,7 @@
         <div class="flex items-center justify-center">
             <ul
                 class="w-full grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3 gap-y-8 sm:gap-y-10 gap-x-10 pt-14">
-                <li v-for="product in productList" :key="product.id"
+                <NuxtLink v-for="product in productList" :to="`/tools/${product.tool_id}`" :key="product.id"
                     class=" w-full rounded-lg sm:rounded-xl bg-[#141414] flex flex-col overflow-clip">
                     <div class="row-span-2 aspect-video w-full relative">
                         <img :src="getImageUrl(product.image)" class="h-full w-full object-cover" alt="">
@@ -50,7 +50,7 @@
                             product.intro_description.slice(0, 150) +
                             (product.intro_description.length > 150 ? '...' : '') }}</div>
                     </div>
-                </li>
+                </NuxtLink>
             </ul>
         </div>
     </div>

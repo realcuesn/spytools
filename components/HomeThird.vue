@@ -17,7 +17,7 @@
 
         <ul ref="scrollStuff"
             class="w-full scroll-stuff-route-grab hidden lg:flex scroll-stuff lg:gap-x-10 2xl:gap-x-14 3xl:gap-x-20 mt-10 lg:pl-[8vw] xl:pl-[10vw] 2xl:pl-[15vw]">
-            <li
+            <NuxtLink :to="`/tools/${productList[0].tool_id}`"
                 class="lg:w-[22rem] lg:min-w-[22rem] xl:w-[26rem] xl:min-w-[26rem] 2xl:w-[36rem] relative 2xl:min-w-[36rem] rounded-xl bg-[#141414] flex flex-col overflow-clip grid-rows-3">
                 <div class="row-span-2 w-full">
                     <img :src="getImageUrl(
@@ -62,9 +62,9 @@
                         class="h-6 w-6 sm:h-10 sm:w-10 " alt="">
                 </div>
 
-            </li>
+            </NuxtLink>
 
-            <li
+            <NuxtLink :to="`/tools/${productList[1].tool_id}`"
                 class="lg:w-[22rem] lg:min-w-[22rem] xl:w-[26rem] xl:min-w-[26rem] 2xl:w-[36rem] relative  2xl:min-w-[36rem] rounded-xl bg-[#141414] flex flex-col overflow-clip grid-rows-3">
                 <div class="row-span-2 w-full">
                     <img :src="getImageUrl(productList[1].image)" class=" w-full aspect-video object-cover"
@@ -104,7 +104,7 @@
                     <img v-else @click="toggleBookmark(productList[1].tool_id)" src="@/assets/icons/bookmark-inactive.svg"
                         class="h-6 w-6 sm:h-10 sm:w-10 " alt="">
                 </div>
-            </li>
+            </NuxtLink>
 
 
             <li
