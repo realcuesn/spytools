@@ -17,15 +17,15 @@
 
         <ul ref="scrollStuff"
             class="w-full scroll-stuff-route-grab hidden lg:flex scroll-stuff lg:gap-x-10 2xl:gap-x-14 3xl:gap-x-20 mt-10 lg:pl-[8vw] xl:pl-[10vw] 2xl:pl-[15vw]">
-            <NuxtLink :to="`/tools/${productList[0].tool_id}`"
+            <li
                 class="lg:w-[22rem] lg:min-w-[22rem] xl:w-[26rem] xl:min-w-[26rem] 2xl:w-[36rem] relative 2xl:min-w-[36rem] rounded-xl bg-[#141414] flex flex-col overflow-clip grid-rows-3">
-                <div class="row-span-2 w-full">
+                <NuxtLink :to="`/tools/${productList[0].tool_id}`" class="row-span-2 w-full">
                     <img :src="getImageUrl(
                         productList[0].image
                     )" class=" w-full aspect-video object-cover" alt="Product Image">
-                </div>
+                </NuxtLink>
                 <div class="p-5">
-                    <div class="flex w-full items-center justify-between">
+                    <NuxtLink :to="`/tools/${productList[0].tool_id}`" class="flex w-full items-center justify-between">
                         <div class="flex gap-x-2 items-center">
                             <img :src="getAvatarUrl(
                                 productList[0].avatar
@@ -47,7 +47,7 @@
                                 alt="">
                             <span class=" lg:text-sm 2xl:text-base font-semibold">Visit</span>
                         </NuxtLink>
-                    </div>
+                    </NuxtLink>
                     <div class=" mt-4 lg:text-xs xl:text-sm 2xl:text-base 2xl:mt-6 text-white">
                         {{ productList[0].intro_description.slice(0, 150) +
                             (productList[0].intro_description.length > 150 ? '...' : '') || 'Loading...' }}
@@ -62,16 +62,16 @@
                         class="h-6 w-6 sm:h-10 sm:w-10 " alt="">
                 </div>
 
-            </NuxtLink>
+            </li>
 
-            <NuxtLink :to="`/tools/${productList[1].tool_id}`"
+            <li
                 class="lg:w-[22rem] lg:min-w-[22rem] xl:w-[26rem] xl:min-w-[26rem] 2xl:w-[36rem] relative  2xl:min-w-[36rem] rounded-xl bg-[#141414] flex flex-col overflow-clip grid-rows-3">
-                <div class="row-span-2 w-full">
+                <NuxtLink :to="`/tools/${productList[1].tool_id}`" class="row-span-2 w-full">
                     <img :src="getImageUrl(productList[1].image)" class=" w-full aspect-video object-cover"
                         alt="Product Image">
-                </div>
+                </NuxtLink>
                 <div class="p-5">
-                    <div class="flex w-full items-center justify-between">
+                    <NuxtLink :to="`/tools/${productList[1].tool_id}`" class="flex w-full items-center justify-between">
                         <div class="flex gap-x-2 items-center">
                             <img :src="getAvatarUrl(productList[1].avatar)"
                                 class="lg:h-9 lg:w-9 xl:h-11 xl:w-11 2xl:h-14 2xl:w-14" alt="Notion Logo">
@@ -91,7 +91,7 @@
                                 alt="">
                             <span class=" lg:text-sm 2xl:text-base font-semibold">Visit</span>
                         </NuxtLink>
-                    </div>
+                    </NuxtLink>
                     <div class=" mt-4 lg:text-xs xl:text-sm 2xl:text-base 2xl:mt-6 text-white">
                         {{ productList[1].intro_description.slice(0, 150) +
                             (productList[1].intro_description.length > 150 ? '...' : '') || 'Loading...' }}
@@ -104,17 +104,17 @@
                     <img v-else @click="toggleBookmark(productList[1].tool_id)" src="@/assets/icons/bookmark-inactive.svg"
                         class="h-6 w-6 sm:h-10 sm:w-10 " alt="">
                 </div>
-            </NuxtLink>
+            </li>
 
 
             <li
                 class="lg:w-[22rem] lg:min-w-[22rem] xl:w-[26rem] xl:min-w-[26rem] 2xl:w-[36rem] relative 2xl:min-w-[36rem] rounded-xl bg-[#141414] flex flex-col overflow-clip grid-rows-3">
-                <div class="row-span-2 w-full">
+                <NuxtLink :to="`/tools/${productList[2].tool_id}`" class="row-span-2 w-full">
                     <img :src="getImageUrl(productList[2].image)
                         " class=" w-full aspect-video object-cover" alt="Product Image">
-                </div>
+                </NuxtLink>
                 <div class="p-5">
-                    <div class="flex w-full items-center justify-between">
+                    <NuxtLink :to="`/tools/${productList[2].tool_id}`" class="flex w-full items-center justify-between">
                         <div class="flex gap-x-2 items-center">
                             <img :src="getAvatarUrl(productList[2].avatar)"
                                 class="lg:h-9 lg:w-9 xl:h-11 xl:w-11 2xl:h-14 2xl:w-14" alt="Notion Logo">
@@ -134,7 +134,7 @@
                                 alt="">
                             <span class=" lg:text-sm 2xl:text-base font-semibold">Visit</span>
                         </NuxtLink>
-                    </div>
+                    </NuxtLink>
                     <div class=" mt-4 lg:text-xs xl:text-sm 2xl:text-base 2xl:mt-6 text-white">
                         {{ productList[2].intro_description.slice(0, 150) +
                             (productList[2].intro_description.length > 150 ? '...' : '') || 'Loading...' }}
@@ -151,12 +151,12 @@
 
             <li
                 class="lg:w-[22rem] lg:min-w-[22rem] xl:w-[26rem] xl:min-w-[26rem] 2xl:w-[36rem] relative 2xl:min-w-[36rem] rounded-xl bg-[#141414] flex flex-col overflow-clip grid-rows-3">
-                <div class="row-span-2 w-full">
+                <NuxtLink :to="`/tools/${productList[3].tool_id}`" class="row-span-2 w-full">
                     <img :src="getImageUrl(productList[3].image)
                         " class=" w-full aspect-video object-cover" alt="Product Image">
-                </div>
+                </NuxtLink>
                 <div class="p-5">
-                    <div class="flex w-full items-center justify-between">
+                    <NuxtLink :to="`/tools/${productList[3].tool_id}`" class="flex w-full items-center justify-between">
                         <div class="flex gap-x-2 items-center">
                             <img :src="getAvatarUrl(productList[3].avatar)"
                                 class="lg:h-9 lg:w-9 xl:h-11 xl:w-11 2xl:h-14 2xl:w-14" alt="Notion Logo">
@@ -176,7 +176,7 @@
                                 alt="">
                             <span class=" lg:text-sm 2xl:text-base font-semibold">Visit</span>
                         </NuxtLink>
-                    </div>
+                    </NuxtLink>
                     <div class=" mt-4 lg:text-xs xl:text-sm 2xl:text-base 2xl:mt-6 text-white">
                         {{ productList[3].intro_description.slice(0, 150) +
                             (productList[3].intro_description.length > 150 ? '...' : '') || 'Loading...' }}
@@ -226,13 +226,13 @@
             <ul class="w-full overflow-auto pl-8 pt-8 grid grid-flow-col gap-x-6 items-center">
                 <li v-for="product in productList" v-if="productList.length > 0"
                     class="w-[94vw] min-w-[94vw] rounded-xl bg-[#141414] relative flex h-full flex-col overflow-clip grid-rows-3">
-                    <div class="row-span-2 w-full">
+                    <NuxtLink :to="`/tools/${product.tool_id}`" class="row-span-2 w-full">
                         <img :src="getImageUrl(product.image)" class=" w-full aspect-video object-cover"
                             alt="Product Image">
-                    </div>
+                    </NuxtLink>
                     <div class="p-5">
                         <div class="flex w-full items-center justify-between">
-                            <div class="flex gap-x-2 items-center">
+                            <NuxtLink :to="`/tools/${product.tool_id}`" class="flex gap-x-2 items-center">
                                 <img :src="getAvatarUrl(product.avatar)" class="h-9 w-9" alt="Notion Logo">
                                 <div class="flex justify-center flex-col">
                                     <h2 class="text-white text-sm">{{
@@ -244,7 +244,7 @@
                                         {{ product.pricing_type }}
                                     </p>
                                 </div>
-                            </div>
+                            </NuxtLink>
                             <NuxtLink v-if="product.url" :to="product.url"
                                 class="flex items-center py-2 pl-4 pr-5 bg-gradient-to-r gap-x-1 from-[#595CFF] button-gradient-animation rounded-md to-[#F7FFDD]">
                                 <img src="@/assets/icons/arrow-up-right.svg" class="h-6 w-6" alt="">

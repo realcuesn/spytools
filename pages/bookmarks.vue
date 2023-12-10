@@ -10,7 +10,9 @@
                 <li v-for="product in bookmarksList" :key="product.id"
                     class=" w-full rounded-lg sm:rounded-xl bg-[#141414] flex flex-col overflow-clip">
                     <div class="row-span-2 aspect-video w-full relative">
-                        <img :src="getImageUrl(product.image)" class="h-full w-full object-cover" alt="">
+                        <NuxtLink :to="`/tools/${product.tool_id}`" class="h-full w-full">
+                            <img :src="getImageUrl(product.image)" class="h-full w-full object-cover" alt="">
+                        </NuxtLink>
 
                         <div class="absolute top-5 right-5">
                             <img @click="toggleBookmark(product.tool_id)" src="@/assets/icons/bookmark-active.svg"
@@ -19,7 +21,7 @@
                     </div>
                     <div class=" p-2 pt-4 sm:p-6 lg:p-5">
                         <div class="flex w-full items-center justify-between">
-                            <div class="flex gap-x-2 items-center">
+                            <NuxtLink :to="`/tools/${product.tool_id}`" class="flex gap-x-2 items-center">
                                 <img :src="getAvatarUrl(product.avatar)" class="h-12 w-12 sm:h-14 sm:w-14" alt="">
                                 <div class="flex justify-center flex-col">
                                     <h2 class="text-white text-base sm:text-lg font-medium">{{ product.title }}</h2>
@@ -36,7 +38,7 @@
                                         {{ product.pricing_type }}
                                     </p>
                                 </div>
-                            </div>
+                            </NuxtLink>
 
 
                             <NuxtLink :to="product.url"
