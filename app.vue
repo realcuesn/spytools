@@ -14,6 +14,7 @@
 
   <SiteNav></SiteNav>
   <SiteMenu v-if="menuState"></SiteMenu>
+  <SiteCommandSearch v-if="open"></SiteCommandSearch>
 </template>
 
 <script setup>
@@ -22,6 +23,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 const menuAnimateState = useState('menu-animate', () => false)
 const menuState = useState('menu', () => false)
+const open = useState('searchOpen', () => false)
 const bookmarks = useState('bookmarks', () => [])
 if (typeof window !== 'undefined') {
   gsap.registerPlugin(ScrollTrigger);

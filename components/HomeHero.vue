@@ -35,15 +35,15 @@
                     Find Your Perfect Solution!
                 </div>
 
-                <form @submit.prevent="" class="flex w-full justify-center items-center lg:-mt-10">
-                    <input type="text"
-                        class="text-[#f7ffdd] bg-[#272727] outline-none py-3 pl-5 rounded-l-md lg:w-[26rem] capitalize text-sm w-full sm:text-xl placeholder:text-[#A3A3A3]"
-                        placeholder="Type to Search for over 1500+ tools" />
-                    <button type="submit"
+                <button @click="open = true" class="flex w-full justify-center items-center lg:-mt-10">
+                    <p
+                        class="text-[#f7ffdd] bg-[#272727] outline-none py-3 pl-5 rounded-l-md lg:w-[26rem] capitalize text-sm w-full sm:text-xl placeholder:text-[#A3A3A3]">
+                        Type to Search for over 1500+ tools</p>
+                    <div type="submit"
                         class="h-11 w-12 sm:h-[52px] sm:w-[60px] rounded-r-md flex items-center justify-center bg-[#f7ffdd]">
                         <img src="@/assets/icons/search-black.svg" class="h-5 w-5 sm:h-7 sm:w-7" alt="" />
-                    </button>
-                </form>
+                    </div>
+                </button>
 
                 <div>
                     <img src="@/assets/branding/logo.svg" alt="" />
@@ -56,6 +56,7 @@
 <script setup>
 import VueWriter from "vue-writer";
 const underscore = "_";
+const open = useState('searchOpen')
 </script>
 
 <style scoped>
