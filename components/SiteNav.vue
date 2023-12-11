@@ -18,7 +18,7 @@
                 <img src="@/assets/icons/bookmark.svg" class="h-5 w-5" alt="">
                 <NuxtLink to="/bookmarks">Bookmarks</NuxtLink>
             </button>
-            <button :class="{ '!opacity-0 !hidden': menuState }"
+            <button @click="open = true" :class="{ '!opacity-0 !hidden': menuState }"
                 class="bg-[#272727] font-medium hidden lg:flex transition-all duration-700 opacity-100 items-center gap-x-3 text-[#F7FFDD] py-2 pl-5 pr-12 rounded-3xl">
                 <img src="@/assets/icons/search.svg" class="h-5 w-5" alt="">
                 <span>Search</span>
@@ -34,6 +34,7 @@
 const user = useSupabaseUser()
 const menuState = useState('menu')
 const menuAnimateState = useState('menu-animate')
+const open = useState('searchOpen')
 const handleMenuToggle = () => {
 
     if (!menuState.value) {

@@ -6,10 +6,12 @@
         <div class="flex items-center justify-center">
             <ul
                 class="w-full grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3 gap-y-8 sm:gap-y-10 gap-x-10 pt-14">
-                <NuxtLink v-for="product in productList" :to="`/tools/${product.tool_id}`" :key="product.id"
+                <li v-for="product in productList" :key="product.id"
                     class=" w-full rounded-lg sm:rounded-xl bg-[#141414] flex flex-col overflow-clip">
                     <div class="row-span-2 aspect-video w-full relative">
-                        <img :src="getImageUrl(product.image)" class="h-full w-full object-cover" alt="">
+                        <NuxtLink :to="`/tools/${product.tool_id}`" class="h-full w-full">
+                            <img :src="getImageUrl(product.image)" class="h-full w-full object-cover" alt="">
+                        </NuxtLink>
                         <div class="absolute top-5 right-5">
                             <img v-if="product.isBookmarked" @click="toggleBookmark(product.tool_id)"
                                 src="@/assets/icons/bookmark-active.svg" class="h-6 w-6 cursor-pointer sm:h-10 sm:w-10"
@@ -20,7 +22,7 @@
                     </div>
                     <div class=" p-2 pt-4 sm:p-6 lg:p-5">
                         <div class="flex w-full items-center justify-between">
-                            <div class="flex gap-x-2 items-center">
+                            <NuxtLink :to="`/tools/${product.tool_id}`" class="flex gap-x-2 items-center">
                                 <img :src="getAvatarUrl(product.avatar)" class="h-12 w-12 sm:h-14 sm:w-14" alt="">
                                 <div class="flex justify-center flex-col">
                                     <h2 class="text-white text-base sm:text-lg font-medium">{{ product.title }}</h2>
@@ -37,7 +39,7 @@
                                         {{ product.pricing_type }}
                                     </p>
                                 </div>
-                            </div>
+                            </NuxtLink>
 
 
                             <NuxtLink :to="product.url"
@@ -50,7 +52,7 @@
                             product.intro_description.slice(0, 150) +
                             (product.intro_description.length > 150 ? '...' : '') }}</div>
                     </div>
-                </NuxtLink>
+                </li>
             </ul>
         </div>
     </div>
