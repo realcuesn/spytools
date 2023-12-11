@@ -19,6 +19,7 @@ import {
     CommandShortcut,
 } from '@/components/ui/command'
 import { XCircleIcon } from 'lucide-vue-next';
+const router = useRouter()
 const open = useState('searchOpen')
 const imageEndUrlEndPoint = 'https://zzjfupocbypxhqvlygyf.supabase.co/storage/v1/object/public/'
 const getAvatarUrl = (avatar) => {
@@ -40,6 +41,10 @@ watch(textValue, async (value) => {
     console.log(value);
 
 });
+const handleRedirect = (value) => {
+    router.push(`/tools/${value}`)
+    open.value = false
+}
 
 const handleSearch = async (value) => {
     if (value.length > 0 && value !== textValue.value && value != null) {
@@ -74,7 +79,8 @@ const handleSearch = async (value) => {
                 <CommandList>
                     <CommandEmpty>No results found.</CommandEmpty>
                     <CommandGroup>
-                        <CommandItem v-for="result in results" :value="result.tool_id">
+                        <CommandItem @click="handleRedirect(result.tool_id)" v-for="result in results"
+                            :value="result.tool_id">
                             <img :src="getAvatarUrl(result.avatar)" class="h-8 w-8 mr-2" />
                             <span>{{ result.title }}</span>
                         </CommandItem>
