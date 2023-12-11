@@ -7,7 +7,7 @@
             <h2 class="text-2xl">{{ name }}</h2>
             <ul
                 class="w-full grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3 gap-y-8 sm:gap-y-10 gap-x-10 pt-14">
-                <li v-for="product in bookmarksList" :key="product.id"
+                <li v-for="product in bookmarksList" :key="product.tool_id"
                     class=" w-full rounded-lg sm:rounded-xl bg-[#141414] flex flex-col overflow-clip">
                     <div class="row-span-2 aspect-video w-full relative">
                         <NuxtLink :to="`/tools/${product.tool_id}`" class="h-full w-full">

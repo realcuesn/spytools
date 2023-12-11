@@ -45,11 +45,18 @@
                             <span class=" lg:text-sm 2xl:text-base font-semibold">Visit</span>
                         </NuxtLink>
 
-                        <button
+                        <button v-if="product.isBookmarked" @click="toggleBookmark(product.tool_id)"
                             class="flex items-center justify-center gap-x-2 lg:py-1 xl:py-1 xl:pl-3 xl:pr-4 2xl:py-2 pl-4 pr-5 bg-gradient-to-r  from-[#595CFF] button-gradient-animation rounded-md to-[#F7FFDD]">
                             <img src="@/assets/icons/bookmark.svg" class="lg:h-4 lg:w-4 xl:h-5 xl:w-5 2xl:h-6 2xl:w-6"
                                 alt="">
                             <span class=" lg:text-sm 2xl:text-base font-semibold">Bookmark</span>
+                        </button>
+
+                        <button v-else @click="toggleBookmark(product.tool_id)"
+                            class="flex items-center justify-center gap-x-2 lg:py-1 xl:py-1 xl:pl-3 xl:pr-4 2xl:py-2 pl-4 pr-5 bg-gradient-to-r  from-[#595CFF] button-gradient-animation rounded-md to-[#F7FFDD]">
+                            <img src="@/assets/icons/bookmark-active.svg"
+                                class="lg:h-4 lg:w-4 xl:h-5 xl:w-5 2xl:h-6 2xl:w-6" alt="">
+                            <span class=" lg:text-sm 2xl:text-base font-semibold">Bookmarked</span>
                         </button>
                     </div>
                 </div>
@@ -83,6 +90,8 @@ const client = useSupabaseClient()
 const route = useRoute()
 const bookmarks = useState('bookmarks');
 const imageEndUrlEndPoint = 'https://zzjfupocbypxhqvlygyf.supabase.co/storage/v1/object/public/'
+const user = useSupabaseUser()
+const router = useRouter()
 const getImageUrl = (image) => {
     //ii avatar has placehold.co in it, return it as it is
     if (image.includes('placehold.co')) {
@@ -105,7 +114,42 @@ const getAvatarUrl = (avatar) => {
 }
 
 
+const toggleBookmark = async (tool_id) => {
+    if (user.value) {
+        if (product.value.isBookmarked) {
+            //remove from bookmarks
+            const { data, error } = await client
+                .from('bookmarks')
+                .delete()
+                .eq('tool_id', tool_id)
+                .eq('user_id', user.value.id)
+            if (error) {
+                console.log(error)
+            } else {
+                product.value.isBookmarked = false
+                bookmarks.value = bookmarks.value.filter((item) => item.tool_id !== tool_id)
+            }
+        } else {
+            //add to bookmarks
+            const { data, error } = await client
+                .from('bookmarks')
+                .insert([{ tool_id, user_id: user.value.id }])
+            if (error) {
+                console.log(error)
+            } else {
+                product.value.isBookmarked = true
+                bookmarks.value.push({ tool_id, user_id: user.value.id })
+            }
+        }
+    } else {
+        router.push('/login')
+    }
+}
+
 onMounted(async () => {
+    if (!user.value) {
+        router.push('/login')
+    }
     const { data, error } = await client
         .from('tools')
         .select('*')
@@ -115,7 +159,14 @@ onMounted(async () => {
     if (error) {
         console.log(error)
     } else {
-        product.value = data
+        //now check the bookmarks array to see if this tool is bookmarked or not
+        const isBookmarked = bookmarks.value.find((item) => item.tool_id === data.tool_id)
+        if (isBookmarked) {
+            product.value = { ...data, isBookmarked: true }
+        } else {
+            product.value = { ...data, isBookmarked: false }
+        }
+
         isLoaded.value = true
     }
 })
