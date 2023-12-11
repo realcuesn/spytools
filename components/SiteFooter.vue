@@ -17,29 +17,24 @@
             <h3 class="text-white font-semibold text-xl">Useful Links</h3>
             <div class="flex gap-x-10 mt-4">
                 <ul class="flex flex-col gap-y-3">
-                    <li>Home</li>
-                    <li>Categories</li>
-                    <li>Blogs</li>
-                    <li>Submit AI Tool</li>
+                    <NuxtLink to="/">Home</NuxtLink>
+                    <NuxtLink to="/categories/">Categories</NuxtLink>
+                    <NuxtLink to="/bookmarks">Bookmarks</NuxtLink>
+
                 </ul>
                 <ul class="flex flex-col gap-y-3">
-                    <li>About Us</li>
-                    <li>Contact Us</li>
-                    <li>Sitemap</li>
-                    <li>Terms & Conditions</li>
 
+                    <NuxtLink to="/sitemap.xml">Sitemap</NuxtLink>
+                    <NuxtLink to="/terms">Terms & Conditions</NuxtLink>
                 </ul>
             </div>
         </div>
         <div class="w-full lg:w-1/3">
-            <!-- h3 -->
             <h3 class="text-white font-semibold text-xl">Search</h3>
-            <!-- p -->
             <p class="text-[#F7FFDD] lg:w-[85%] mt-4">
                 Explore and discover a comprehensive list of AI tools effortlessly with our search feature. Simply enter
                 your query below, and let the search box guide you through the vast array of AI tools available across the
                 entire application. </p>
-            <!-- search engine -->
 
         </div>
     </div>

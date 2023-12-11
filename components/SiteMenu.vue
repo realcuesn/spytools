@@ -26,11 +26,11 @@
                 </div>
                 <div class="overflow-y-clip">
                     <div ref="linkFour">
-                        <NuxtLink @click="menuAnimateState = true" to="/about" class="font-semibold">About Us
+                        <NuxtLink @click="menuAnimateState = true" to="/sitemap.xml" class="font-semibold">SiteMap
                         </NuxtLink>
                     </div>
                 </div>
-                <div class="overflow-y-clip">
+                <div class="overflow-y-clip hidden">
                     <div ref="linkFive">
                         <NuxtLink @click="menuAnimateState = true" to="/submit" class="font-semibold">Submit
                         </NuxtLink>
