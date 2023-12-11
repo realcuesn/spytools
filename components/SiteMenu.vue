@@ -10,7 +10,7 @@
                         </NuxtLink>
                     </div>
                 </div>
-                <div class="overflow-y-clip">
+                <div :class="{ '!hidden': !user }" class="overflow-y-clip">
                     <div ref="linkTwo">
                         <NuxtLink @click="menuAnimateState = true" to="/bookmarks" class="font-semibold">
                             Bookmarks
@@ -26,8 +26,8 @@
                 </div>
                 <div class="overflow-y-clip">
                     <div ref="linkFour">
-                        <NuxtLink @click="menuAnimateState = true" to="/sitemap.xml" class="font-semibold">SiteMap
-                        </NuxtLink>
+                        <a @click="menuAnimateState = true" href="/sitemap.xml" class="font-semibold">SiteMap
+                        </a>
                     </div>
                 </div>
                 <div class="overflow-y-clip hidden">

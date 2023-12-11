@@ -2,12 +2,12 @@
     <div class="w-full relative">
         <section class="w-full flex flex-col gap-y-14 items-center justify-between pt-28">
             <div class="hidden sm:flex mx-auto items-center gap-x-8">
-                <span class="text-base text-[#CCCCCC] font-medium">Explore</span>
+                <NuxtLink to="/categories" class="text-base text-[#CCCCCC] font-medium">Explore</NuxtLink>
                 <NuxtLink to="/categories" class="text-[#F7FFDD] font-medium bg-[#272727] px-6 rounded-md py-2">Categories
                 </NuxtLink>
-                <button class="text-[#F7FFDD] font-medium bg-[#272727] px-6 rounded-md py-2 min-w-fit">
+                <NuxtLink to="#featuredtools" class="text-[#F7FFDD] font-medium bg-[#272727] px-6 rounded-md py-2 min-w-fit">
                     Featured Tools
-                </button>
+                </NuxtLink>
                 <div class="w-full flex gap-x-2 items-center border-b-2 border-b-white">
                     <NuxtLink to="/categories" class="text-white font-medium">View All</NuxtLink>
                     <img src="@/assets/icons/arrow-right.svg" class="h-3.5" alt="Arrow right" />
@@ -24,7 +24,7 @@
                     AI Tools <br class="hidden lg:block" />for <br class="lg:hidden" />
                     <span
                         class="bg-gradient-to-r from-[#595CFF] text-gradient-animation to-[#FFC6C6] bg-clip-text text-transparent">
-                        <vue-writer :eraseSpeed="60" :typeSpeed="100" :caret="underscore"
+                        <VueWriter :eraseSpeed="60" :typeSpeed="100" :caret="'_'"
                             class="bg-gradient-to-r from-[#595CFF] text-gradient-animation to-[#FFC6C6] bg-clip-text text-transparent"
                             :array="['Your Business.', 'Individual']" />
                     </span>
@@ -54,8 +54,6 @@
 </template>
 
 <script setup>
-import VueWriter from "vue-writer";
-const underscore = "_";
 const open = useState('searchOpen')
 </script>
 

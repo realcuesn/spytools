@@ -147,9 +147,6 @@ const toggleBookmark = async (tool_id) => {
 }
 
 onMounted(async () => {
-    if (!user.value) {
-        router.push('/login')
-    }
     const { data, error } = await client
         .from('tools')
         .select('*')

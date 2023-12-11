@@ -101,6 +101,9 @@ const toggleBookmark = async (tool_id) => {
 }
 
 onMounted(async () => {
+    if (!user.value) {
+        router.push('/login')
+    }
     const promises = bookmarks.value.map(async (item) => {
         // Fetch the tool from the Supabase tools table using the client
         const { data, error } = await client.from('tools').select('*').eq('tool_id', item.tool_id).single();

@@ -1,5 +1,5 @@
 <template>
-  <video class="h-screen object-cover w-full fixed top-0 brightness-75 saturate-50" autoplay muted playsinline loop
+  <video class="h-screen object-cover w-full fixed top-0 brightness-75 grayscale" autoplay muted playsinline loop
     src="/gradient-loop.mp4"></video>
   <div v-if="isLoaded" class="w-full relative">
     <NuxtPage></NuxtPage>

@@ -24,7 +24,7 @@
                 </ul>
                 <ul class="flex flex-col gap-y-3">
 
-                    <NuxtLink to="/sitemap.xml">Sitemap</NuxtLink>
+                    <a href="/sitemap.xml">Sitemap</a>
                     <NuxtLink to="/terms">Terms & Conditions</NuxtLink>
                 </ul>
             </div>
