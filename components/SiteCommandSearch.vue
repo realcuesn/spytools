@@ -106,9 +106,9 @@ const handleSearch = async () => {
 
                 </form>
 
-                <div v-if="results.length > 0" class="bg-[#272727] py-2 mt-4 px-2 rounded-md">
+                <div v-if="results.length > 0" class="bg-[#272727] py-2 mt-4 px-2 flex flex-col w-full gap-y-3 rounded-md">
                     <div v-for="result in results" @click="handleRedirect(result.tool_id)"
-                        class="flex items-center bg-neutral-900 rounded-md gap-x-1 p-2">
+                        class="flex items-center bg-neutral-700 rounded-md gap-x-1 p-2">
                         <img :src="getAvatarUrl(result.avatar)" class="h-8 w-8 mr-2" />
                         <span>{{ result.title }}</span>
                     </div>
