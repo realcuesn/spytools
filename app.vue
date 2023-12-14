@@ -1,6 +1,9 @@
 <template>
-  <video ref="videoRef" class="h-screen object-cover w-full fixed top-0 brightness-75 grayscale" autoplay muted
-    playsinline loop src="/gradient-loop.mp4"></video>
+  <!--   <video ref="videoRef" class="h-screen object-cover w-full fixed top-0 brightness-75 grayscale" autoplay muted
+    playsinline loop src="/gradient-loop.mp4"></video> -->
+  <div class="h-screen w-full fixed top-0">
+    <img src="@/assets/branding/bg-svg.svg" class="h-full w-full object-cover" alt="">
+  </div>
   <div v-if="isLoaded" class="w-full relative">
     <NuxtPage></NuxtPage>
     <SiteFooter></SiteFooter>
@@ -25,7 +28,6 @@ const menuAnimateState = useState('menu-animate', () => false)
 const menuState = useState('menu', () => false)
 const open = useState('searchOpen', () => false)
 const bookmarks = useState('bookmarks', () => [])
-const videoRef = ref(null)
 if (typeof window !== 'undefined') {
   gsap.registerPlugin(ScrollTrigger);
 }
@@ -58,8 +60,6 @@ onMounted(async () => {
     isLoaded.value = true
   }
 
-  console.log(videoRef.value)
-  videoRef.value.muted = true
 
 })
 

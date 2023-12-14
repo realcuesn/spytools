@@ -61,7 +61,6 @@
 const client = useSupabaseClient()
 const name = ref('')
 const bookmarksList = ref([])
-const bookmark = ref(false)
 const user = useSupabaseUser()
 const imageEndUrlEndPoint = 'https://zzjfupocbypxhqvlygyf.supabase.co/storage/v1/object/public/'
 const getAvatarUrl = (avatar) => {

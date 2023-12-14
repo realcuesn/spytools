@@ -8,11 +8,14 @@
         </NuxtLink>
 
         <div class="flex items-center gap-x-4">
-            <button v-if="!user"
-                class="bg-[#272727] font-medium hidden  lg:flex items-center gap-x-2 text-[#F7FFDD] py-2 pl-5 pr-7 rounded-3xl">
-                <img src="@/assets/icons/google-colored.svg" class="h-5 w-5" alt="">
-                <NuxtLink to="/login">Login</NuxtLink>
-            </button>
+            <div v-if="!user">
+                <button
+                    class="bg-[#272727] font-medium hidden  lg:flex items-center gap-x-2 text-[#F7FFDD] py-2 pl-5 pr-7 rounded-3xl">
+                    <img src="@/assets/icons/google-colored.svg" class="h-5 w-5" alt="">
+                    <NuxtLink to="/login">Login</NuxtLink>
+                </button>
+            </div>
+
             <button v-else
                 class="bg-[#272727] font-medium hidden  lg:flex items-center gap-x-2 text-[#F7FFDD] py-2 pl-5 pr-7 rounded-3xl">
                 <img src="@/assets/icons/bookmark.svg" class="h-5 w-5" alt="">
@@ -36,7 +39,6 @@ const menuState = useState('menu')
 const menuAnimateState = useState('menu-animate')
 const open = useState('searchOpen')
 const handleMenuToggle = () => {
-
     if (!menuState.value) {
         menuState.value = true
     } else {
