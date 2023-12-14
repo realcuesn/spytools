@@ -30,25 +30,43 @@ const handleRedirect = (value) => {
 const handleSearch = async () => {
     console.log('hello');
     if (textValue.value.length > 0) {
-        if (textValue.value.length > 0) {
-            const { data, error } = await client
-                .from('tools')
-                .select('*')
-                .or([
-                    { 'description:ilike': `%${textValue.value}%` },
-                    { 'title:ilike': `%${textValue.value}%` },
-                    { 'tags: @>': [`%${textValue.value}%`] },
-                    // Add more conditions as needed
-                ])
-                .limit(5);
-            if (data) results.value = data;
-            console.log(data);
-        } else {
-            results.value = [];
-        }
-    }
+        const descriptionQuery = client
+            .from('tools')
+            .select('*')
+            .ilike('description', `%${textValue.value}%`)
+            .limit(5);
 
+        const anotherColumnQuery = client
+            .from('tools')
+            .select('*')
+            .ilike('title', `%${textValue.value}%`)
+            .limit(5);
+
+        const tagsQuery = client
+            .from('tools')
+            .select('*')
+            .or('tags: @>[%$search_term%]')
+            .limit(5);
+
+        const [descriptionResult, anotherColumnResult, tagsResult] = await Promise.all([
+            descriptionQuery,
+            anotherColumnQuery,
+            tagsQuery,
+        ]);
+
+        const combinedResults = [
+            ...(descriptionResult.data || []),
+            ...(anotherColumnResult.data || []),
+            ...(tagsResult.data || []),
+        ];
+
+        results.value = combinedResults;
+        console.log(combinedResults);
+    } else {
+        results.value = [];
+    }
 };
+
 </script>
 
 <template>
@@ -77,22 +95,27 @@ const handleSearch = async () => {
             </Command> -->
 
             <div class="w-full max-w-3xl px-3  mx-auto ">
-                <div class="w-full flex items-center">
+                <form @submit.prevent="handleSearch()" class="w-full flex items-center">
                     <input
                         class="text-[#f7ffdd] bg-[#272727] outline-none py-3 pl-3 text-left rounded-l-md capitalize text-sm w-full sm:text-xl placeholder:text-[#A3A3A3]"
                         type="text" placeholder="Type to Search for over 1500+ tools" v-model="textValue">
-                    <button @click="handleSearch()"
+                    <button type="submit"
                         class="h-11 w-12 sm:h-[52px] sm:w-[60px] rounded-r-md flex items-center justify-center bg-[#f7ffdd]">
                         <img src="@/assets/icons/search-black.svg" class="h-5 w-5 sm:h-7 sm:w-7" alt="" />
                     </button>
 
-                </div>
+                </form>
 
-                <div class="bg-[#272727] py-20 mt-4 rounded-md">
-                    <div @click="handleRedirect(result.tool_id)" v-for="result in results" class="">
+                <div v-if="results.length > 0" class="bg-[#272727] py-2 mt-4 px-2 rounded-md">
+                    <div v-for="result in results" @click="handleRedirect(result.tool_id)"
+                        class="flex items-center bg-neutral-900 rounded-md gap-x-1 p-2">
                         <img :src="getAvatarUrl(result.avatar)" class="h-8 w-8 mr-2" />
                         <span>{{ result.title }}</span>
                     </div>
+                </div>
+
+                <div v-else class="bg-[#272727] py-2 mt-4 px-2 rounded-md text-center">
+                    <span class="text-[#A3A3A3]">No results found.</span>
                 </div>
             </div>
 
