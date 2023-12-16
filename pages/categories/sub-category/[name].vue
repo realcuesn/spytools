@@ -68,10 +68,11 @@ const bookmarks = useState('bookmarks')
 const imageEndUrlEndPoint = 'https://zzjfupocbypxhqvlygyf.supabase.co/storage/v1/object/public/'
 const getImageUrl = (image) => {
     //ii avatar has placehold.co in it, return it as it is
-    if (image.includes('placehold.co')) {
-        return image
+    if (avatar.includes('placehold.co')) {
+        return avatar
     } else {
-        return `${imageEndUrlEndPoint}${image}`
+        console.log(avatar)
+        return avatar
     }
 
 }

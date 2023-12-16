@@ -1,5 +1,6 @@
 <template>
-    <div id="featuredtools" ref="container" class="w-full px-5 xl:px-6 h-screen hidden lg:flex flex-col justify-between overflow-x-clip py-10">
+    <div id="featuredtools" ref="container"
+        class="w-full px-5 xl:px-6 h-screen hidden lg:flex flex-col justify-between overflow-x-clip py-10">
         <div class="flex justify-between items-end">
             <div class="xl:space-y-2 2xl:space-y-4">
                 <h2 class="text-white lg:text-3xl xl:text-3xl 2xl:text-4xl font-bold">Featured <span
@@ -295,7 +296,7 @@ const getAvatarUrl = (avatar) => {
         return avatar
     } else {
         console.log(avatar)
-        return `${imageEndUrlEndPoint}${avatar}`
+        return avatar
     }
 
 }

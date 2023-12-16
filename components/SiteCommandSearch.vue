@@ -9,7 +9,7 @@ const getAvatarUrl = (avatar) => {
         return avatar
     } else {
         console.log(avatar)
-        return `${imageEndUrlEndPoint}${avatar}`
+        return avatar
     }
 
 }
@@ -103,7 +103,6 @@ const handleSearch = async () => {
                         class="h-11 w-12 sm:h-[52px] sm:w-[60px] rounded-r-md flex items-center justify-center bg-[#f7ffdd]">
                         <img src="@/assets/icons/search-black.svg" class="h-5 w-5 sm:h-7 sm:w-7" alt="" />
                     </button>
-
                 </form>
 
                 <div v-if="results.length > 0" class="bg-[#272727] py-2 mt-4 px-2 flex flex-col w-full gap-y-3 rounded-md">
@@ -118,7 +117,6 @@ const handleSearch = async () => {
                     <span class="text-[#A3A3A3]">No results found.</span>
                 </div>
             </div>
-
         </div>
 
     </div>

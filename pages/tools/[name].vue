@@ -94,10 +94,11 @@ const user = useSupabaseUser()
 const router = useRouter()
 const getImageUrl = (image) => {
     //ii avatar has placehold.co in it, return it as it is
-    if (image.includes('placehold.co')) {
-        return image
+    if (avatar.includes('placehold.co')) {
+        return avatar
     } else {
-        return `${imageEndUrlEndPoint}${image}`
+        console.log(avatar)
+        return avatar
     }
 
 }
