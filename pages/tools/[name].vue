@@ -109,7 +109,7 @@ const getAvatarUrl = (avatar) => {
         return avatar
     } else {
         console.log(avatar)
-        return `${imageEndUrlEndPoint}${avatar}`
+        return avatar
     }
 
 }

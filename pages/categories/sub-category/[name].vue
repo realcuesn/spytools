@@ -66,7 +66,7 @@ const productList = ref([])
 const user = useSupabaseUser()
 const bookmarks = useState('bookmarks')
 const imageEndUrlEndPoint = 'https://zzjfupocbypxhqvlygyf.supabase.co/storage/v1/object/public/'
-const getImageUrl = (image) => {
+const getImageUrl = (avatar) => {
     //ii avatar has placehold.co in it, return it as it is
     if (avatar.includes('placehold.co')) {
         return avatar
@@ -83,7 +83,7 @@ const getAvatarUrl = (avatar) => {
         return avatar
     } else {
         console.log(avatar)
-        return `${imageEndUrlEndPoint}${avatar}`
+        return avatar
     }
 
 }
