@@ -10,7 +10,7 @@
                     class=" w-full rounded-lg sm:rounded-xl bg-[#141414] flex flex-col overflow-clip">
                     <div class="row-span-2 aspect-video w-full relative">
                         <NuxtLink :to="`/tools/${product.tool_id}`" class="h-full w-full">
-                            <img :src="getImageUrl(product.image)" class="h-full w-full object-cover" alt="">
+                            <img :src="getImageUrl(product.image)" class="h-full w-full aspect-video object-cover" alt="">
                         </NuxtLink>
                         <div class="absolute top-5 right-5">
                             <img v-if="product.isBookmarked" @click="toggleBookmark(product.tool_id)"

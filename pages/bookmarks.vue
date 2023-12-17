@@ -11,7 +11,7 @@
                     class=" w-full rounded-lg sm:rounded-xl bg-[#141414] flex flex-col overflow-clip">
                     <div class="row-span-2 aspect-video w-full relative">
                         <NuxtLink :to="`/tools/${product.tool_id}`" class="h-full w-full">
-                            <img :src="getImageUrl(product.image)" class="h-full w-full object-cover" alt="">
+                            <img :src="getImageUrl(product.image)" class="h-full w-full aspect-video object-cover" alt="">
                         </NuxtLink>
 
                         <div class="absolute top-5 right-5">
@@ -62,7 +62,6 @@ const client = useSupabaseClient()
 const name = ref('')
 const bookmarksList = ref([])
 const user = useSupabaseUser()
-const imageEndUrlEndPoint = 'https://zzjfupocbypxhqvlygyf.supabase.co/storage/v1/object/public/'
 const getAvatarUrl = (avatar) => {
     //ii avatar has placehold.co in it, return it as it is
     if (avatar.includes('placehold.co')) {
@@ -79,7 +78,7 @@ const getImageUrl = (image) => {
     if (image.includes('placehold.co')) {
         return image
     } else {
-        return `${imageEndUrlEndPoint}${image}`
+        return image
     }
 
 }
@@ -100,6 +99,7 @@ const toggleBookmark = async (tool_id) => {
 }
 
 onMounted(async () => {
+    console.log('mounted', bookmarks.value)
     if (!user.value) {
         router.push('/login')
     }
@@ -116,10 +116,16 @@ onMounted(async () => {
 
     });
 
-    // Wait for all promises to resolve using Promise.all
-    bookmarksList.value = await Promise.all(promises);
 
-    console.log(bookmarksList.value);
+    // Wait for all promises to resolve using Promise.all
+    bookmarksList.value = (await Promise.all(promises)).map((item) => {
+        return {
+            ...item,
+            isBookmarked: true
+        }
+    });
+
+    console.log('After:', bookmarksList.value);
 })
 
 </script>
