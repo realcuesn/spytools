@@ -3,7 +3,8 @@
         <div class="w-full grid items-center lg:grid-cols-2 gap-x-8 mt-20">
             <div class="w-full">
                 <img :src="getImageUrl(product.image)"
-                    class="aspect-video lg:aspect-auto h-full w-full rounded-lg object-cover" :alt="product.title">
+                    class="aspect-video lg:aspect-auto max-h-[32rem] h-full w-full rounded-lg object-cover"
+                    :alt="product.title">
             </div>
             <div class="w-full h-full mt-10 flex flex-col justify-between">
                 <div>
@@ -89,16 +90,15 @@ const product = ref({})
 const client = useSupabaseClient()
 const route = useRoute()
 const bookmarks = useState('bookmarks');
-const imageEndUrlEndPoint = 'https://zzjfupocbypxhqvlygyf.supabase.co/storage/v1/object/public/'
 const user = useSupabaseUser()
 const router = useRouter()
 const getImageUrl = (image) => {
     //ii avatar has placehold.co in it, return it as it is
-    if (avatar.includes('placehold.co')) {
-        return avatar
+    if (image.includes('placehold.co')) {
+        return image
     } else {
-        console.log(avatar)
-        return avatar
+        console.log(image)
+        return image
     }
 
 }

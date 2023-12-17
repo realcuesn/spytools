@@ -361,7 +361,7 @@ const getImageUrl = (image) => {
     if (image.includes('placehold.co')) {
         return image
     } else {
-        return `${imageEndUrlEndPoint}${image}`
+        return image
     }
 
 }
