@@ -45,8 +45,7 @@ const handleSearch = async () => {
         const tagsQuery = client
             .from('tools')
             .select('*')
-            .or('tags: @>[%$search_term%]')
-            .limit(5);
+            .ilike('tags::text', `%${textValue.value}%`);
 
         const [descriptionResult, anotherColumnResult, tagsResult] = await Promise.all([
             descriptionQuery,
