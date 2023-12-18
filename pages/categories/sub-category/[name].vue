@@ -91,7 +91,6 @@ const getAvatarUrl = (avatar) => {
 const toggleBookmark = async (tool_id) => {
     //now add the bookmark to the bookmarks array if it doesn't exist and also delete and remove it if it does exist and update the UI and also don't forget to update the supabase database also remember we use user_id propery which is the same as the user id in the supabase database.
     if (bookmarks.value.includes(tool_id)) {
-        console.log('already bookmarked')
         //remove the bookmark
         bookmarks.value = bookmarks.value.filter((item) => item !== tool_id)
         //now update the UI
@@ -145,6 +144,7 @@ const toggleBookmark = async (tool_id) => {
 
 
 onMounted(async () => {
+    console.log(route.params.name)
     name.value = route.params.name
     const res = await client.from('tools').select().eq('category', route.params.name)
     const data = ref(res.data);
@@ -172,7 +172,7 @@ onMounted(async () => {
     if (error.value) {
         console.log(error)
     } else {
-        if (data.value.length >= 4) {
+        if (data.value.length) {
             productList.value = data.value.map((item) => {
                 const isBookmarked = checkBookmarked(item.tool_id);
                 console.log(isBookmarked);
@@ -187,6 +187,7 @@ onMounted(async () => {
                     avatar: item.avatar
                 }
             })
+        } else {
         }
     }
 
