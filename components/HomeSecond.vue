@@ -2,7 +2,7 @@
     <div class="w-full px-5 xl:px-6 py-10 sm:py-20 2xl:pt-10">
         <ul
             class="w-full grid grid-cols-1 lg:grid-cols-3 gap-x-10 justify-center gap-y-4 sm:gap-y-10 2xl:gap-y-8 2xl:px-[10%]">
-            <NuxtLink to="/categories/category/text"
+            <NuxtLink to="/categories/category/texto"
                 class="bg-[#090909] bg-opacity-20 backdrop-blur-lg p-5 sm:p-7 rounded-lg">
                 <div class="flex items-center justify-between w-full">
                     <img src="@/assets/icons/text-app.svg" class="h-16 sm:h-20" alt="">
@@ -19,7 +19,7 @@
                 </div>
             </NuxtLink>
 
-            <NuxtLink to="/categories/category/image" class="bg-[#090909] bg-opacity-20 backdrop-blur-lg p-5 sm:p-7 rounded-lg">
+            <NuxtLink to="/categories/category/imagen" class="bg-[#090909] bg-opacity-20 backdrop-blur-lg p-5 sm:p-7 rounded-lg">
                 <div class="flex items-center justify-between w-full">
                     <img src="@/assets/icons/image-app.svg" class="h-16 sm:h-20" alt="">
                     <img src="@/assets/icons/arrow-up-right-image-apps.svg" class="h-10 sm:h-14" alt="">
@@ -35,7 +35,7 @@
                 </div>
             </NuxtLink>
 
-            <NuxtLink to="/categories/category/code" class="bg-[#090909] bg-opacity-20 backdrop-blur-lg p-5 sm:p-7 rounded-lg">
+            <NuxtLink to="/categories/category/código" class="bg-[#090909] bg-opacity-20 backdrop-blur-lg p-5 sm:p-7 rounded-lg">
                 <div class="flex items-center justify-between w-full">
                     <img src="@/assets/icons/code-app.svg" class="h-16 sm:h-20" alt="">
                     <img src="@/assets/icons/arrow-up-right-code-apps.svg" class="h-10 sm:h-14" alt="">
@@ -67,7 +67,7 @@
                 </div>
             </NuxtLink>
 
-            <NuxtLink to="/categories/category/video" class="bg-[#090909] bg-opacity-20 backdrop-blur-lg p-5 sm:p-7 rounded-lg">
+            <NuxtLink to="/categories/category/vídeo" class="bg-[#090909] bg-opacity-20 backdrop-blur-lg p-5 sm:p-7 rounded-lg">
                 <div class="flex items-center justify-between w-full">
                     <img src="@/assets/icons/video-app.svg" class="h-16 sm:h-20" alt="">
                     <img src="@/assets/icons/arrow-up-right-video-apps.svg" class="h-10 sm:h-14" alt="">
@@ -99,7 +99,7 @@
                 </div>
             </NuxtLink>
 
-            <NuxtLink to="/categories/category/business" class="bg-[#090909] bg-opacity-20 backdrop-blur-lg p-5 sm:p-7 rounded-lg">
+            <NuxtLink to="/categories/category/negocios" class="bg-[#090909] bg-opacity-20 backdrop-blur-lg p-5 sm:p-7 rounded-lg">
                 <div class="flex items-center justify-between w-full">
                     <img src="@/assets/icons/business-app.svg" class="h-16 sm:h-20" alt="">
                     <img src="@/assets/icons/arrow-up-right-business-apps.svg" class="h-10 sm:h-14" alt="">
