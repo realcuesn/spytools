@@ -5,7 +5,8 @@
                 <NuxtLink to="/categories" class="text-base text-[#CCCCCC] font-medium">Explore</NuxtLink>
                 <NuxtLink to="/categories" class="text-[#F7FFDD] font-medium bg-[#272727] px-6 rounded-md py-2">Categories
                 </NuxtLink>
-                <NuxtLink to="#featuredtools" class="text-[#F7FFDD] font-medium bg-[#272727] px-6 rounded-md py-2 min-w-fit">
+                <NuxtLink to="#featuredtools"
+                    class="text-[#F7FFDD] font-medium bg-[#272727] px-6 rounded-md py-2 min-w-fit">
                     Featured Tools
                 </NuxtLink>
                 <div class="w-full flex gap-x-2 items-center border-b-2 border-b-white">
@@ -35,7 +36,7 @@
                     Find Your Perfect Solution!
                 </div>
 
-                <button @click="open = true" class="flex w-full justify-center items-center lg:-mt-10">
+                <button @click="router.push('/search')" class="flex w-full justify-center items-center lg:-mt-10">
                     <p
                         class="text-[#f7ffdd] bg-[#272727] outline-none py-3 pl-5 rounded-l-md lg:w-[26rem] capitalize text-sm w-full sm:text-xl placeholder:text-[#A3A3A3]">
                         Type to Search for over 1500+ tools</p>
@@ -54,7 +55,7 @@
 </template>
 
 <script setup>
-const open = useState('searchOpen')
+const router = useRouter();
 </script>
 
 <style scoped>
