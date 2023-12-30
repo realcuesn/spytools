@@ -40,24 +40,24 @@
                     </ul>
                     <div class="grid grid-cols-2 mb-4 gap-x-4">
                         <NuxtLink v-if="product.url" :to="product.url"
-                            class="flex items-center justify-center lg:py-1 xl:py-1 xl:pl-3 xl:pr-4 2xl:py-2 pl-4 pr-5 bg-gradient-to-r gap-x-1 from-[#595CFF] button-gradient-animation rounded-md to-[#F7FFDD]">
-                            <img src="@/assets/icons/arrow-up-right.svg" class="lg:h-4 lg:w-4 xl:h-5 xl:w-5 2xl:h-6 2xl:w-6"
-                                alt="">
-                            <span class=" lg:text-sm 2xl:text-base font-semibold">Visit</span>
+                            class="flex items-center justify-center py-2.5 lg:py-1 xl:py-1 xl:pl-3 xl:pr-4 2xl:py-2 pl-4 pr-5 bg-gradient-to-r gap-x-1 from-[#595CFF] button-gradient-animation rounded-md to-[#F7FFDD]">
+                            <img src="@/assets/icons/arrow-up-right.svg"
+                                class=" h-6 lg:h-4 lg:w-4 xl:h-5 xl:w-5 2xl:h-6 2xl:w-6" alt="">
+                            <span class="text-sm lg:text-sm 2xl:text-base font-semibold">Visit</span>
                         </NuxtLink>
 
                         <button v-if="product.isBookmarked" @click="toggleBookmark(product.tool_id)"
-                            class="flex items-center justify-center gap-x-2 lg:py-1 xl:py-1 xl:pl-3 xl:pr-4 2xl:py-2 pl-4 pr-5 bg-gradient-to-r  from-[#595CFF] button-gradient-animation rounded-md to-[#F7FFDD]">
-                            <img src="@/assets/icons/bookmark.svg" class="lg:h-4 lg:w-4 xl:h-5 xl:w-5 2xl:h-6 2xl:w-6"
+                            class="flex items-center justify-center gap-x-2  py-2.5 lg:py-1 xl:py-1 xl:pl-3 xl:pr-4 2xl:py-2 pl-4 pr-5 bg-gradient-to-r  from-[#595CFF] button-gradient-animation rounded-md to-[#F7FFDD]">
+                            <img src="@/assets/icons/bookmark.svg" class=" h-6 lg:h-4 lg:w-4 xl:h-5 xl:w-5 2xl:h-6 2xl:w-6"
                                 alt="">
-                            <span class=" lg:text-sm 2xl:text-base font-semibold">Bookmark</span>
+                            <span class="text-xs lg:text-sm 2xl:text-base font-semibold">Bookmark</span>
                         </button>
 
                         <button v-else @click="toggleBookmark(product.tool_id)"
-                            class="flex items-center justify-center gap-x-2 lg:py-1 xl:py-1 xl:pl-3 xl:pr-4 2xl:py-2 pl-4 pr-5 bg-gradient-to-r  from-[#595CFF] button-gradient-animation rounded-md to-[#F7FFDD]">
+                            class="flex items-center justify-center gap-x-2 py-2.5  lg:py-1 xl:py-1 xl:pl-3 xl:pr-4 2xl:py-2 pl-4 pr-5 bg-gradient-to-r  from-[#595CFF] button-gradient-animation rounded-md to-[#F7FFDD]">
                             <img src="@/assets/icons/bookmark-active.svg"
-                                class="lg:h-4 lg:w-4 xl:h-5 xl:w-5 2xl:h-6 2xl:w-6" alt="">
-                            <span class=" lg:text-sm 2xl:text-base font-semibold">Bookmarked</span>
+                                class=" h-6 lg:h-4 lg:w-4 xl:h-5 xl:w-5 2xl:h-6 2xl:w-6" alt="">
+                            <span class="text-sm lg:text-sm 2xl:text-base font-semibold">Bookmarked</span>
                         </button>
                     </div>
                 </div>
