@@ -7,19 +7,19 @@
                     class="text-2xl uppercase font-bold logo-gradient-animation bg-gradient-to-l from-[#595CFF] to-[#FFC6C6] bg-clip-text text-transparent ">
                     Spytools</h2>
             </div>
-            <!-- p -->
             <p class="text-[#F7FFDD] lg:w-[55%] mt-4">
-                The world's best place to discover and find the perfect productivity tools. From work to life, our
-                productivity tools power our thinking, ideas and progress.
+                El mejor lugar del mundo para descubrir y encontrar las herramientas de productividad perfectas. Desde el
+                trabajo hasta la vida, nuestras herramientas de productividad potencian nuestro pensamiento, ideas y
+                progreso.
             </p>
         </div>
         <div class="w-full lg:w-1/3">
-            <h3 class="text-white font-semibold text-xl">Useful Links</h3>
+            <h3 class="text-white font-semibold text-xl">Enlaces útiles</h3>
             <div class="flex gap-x-10 mt-4">
                 <ul class="flex flex-col gap-y-3">
-                    <NuxtLink to="/">Home</NuxtLink>
-                    <NuxtLink to="/categories/">Categories</NuxtLink>
-                    <NuxtLink to="/bookmarks">Bookmarks</NuxtLink>
+                    <NuxtLink to="/">Hogar</NuxtLink>
+                    <NuxtLink to="/categories/">Categorías</NuxtLink>
+                    <NuxtLink to="/bookmarks">Marcadores</NuxtLink>
 
                 </ul>
                 <ul class="flex flex-col gap-y-3">
@@ -30,11 +30,11 @@
             </div>
         </div>
         <div class="w-full lg:w-1/3">
-            <h3 class="text-white font-semibold text-xl">Search</h3>
+            <h3 class="text-white font-semibold text-xl">Buscar</h3>
             <p class="text-[#F7FFDD] lg:w-[85%] mt-4">
-                Explore and discover a comprehensive list of AI tools effortlessly with our search feature. Simply enter
-                your query below, and let the search box guide you through the vast array of AI tools available across the
-                entire application. </p>
+                Explora y descubre fácilmente una lista completa de herramientas de IA con nuestra función de búsqueda.
+                Simplemente ingresa tu consulta a continuación y deja que la caja de búsqueda te guíe a través de la amplia
+                variedad de herramientas de IA disponibles en toda la aplicación. </p>
 
         </div>
     </div>

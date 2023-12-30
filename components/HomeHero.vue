@@ -2,15 +2,15 @@
     <div class="w-full relative">
         <section class="w-full flex flex-col gap-y-14 items-center justify-between pt-28">
             <div class="hidden sm:flex mx-auto items-center gap-x-8">
-                <NuxtLink to="/categories" class="text-base text-[#CCCCCC] font-medium">Explore</NuxtLink>
-                <NuxtLink to="/categories" class="text-[#F7FFDD] font-medium bg-[#272727] px-6 rounded-md py-2">Categories
+                <NuxtLink to="/categories" class="text-base text-[#CCCCCC] font-medium">Explorar</NuxtLink>
+                <NuxtLink to="/categories" class="text-[#F7FFDD] font-medium bg-[#272727] px-6 rounded-md py-2">categorias
                 </NuxtLink>
                 <NuxtLink to="#featuredtools"
                     class="text-[#F7FFDD] font-medium bg-[#272727] px-6 rounded-md py-2 min-w-fit">
-                    Featured Tools
+                    Herramientas destacadas
                 </NuxtLink>
                 <div class="w-full flex gap-x-2 items-center border-b-2 border-b-white">
-                    <NuxtLink to="/categories" class="text-white font-medium">View All</NuxtLink>
+                    <NuxtLink to="/categories" class="text-white font-medium">Ver todo</NuxtLink>
                     <img src="@/assets/icons/arrow-right.svg" class="h-3.5" alt="Arrow right" />
                 </div>
             </div>
@@ -32,14 +32,14 @@
                 </div>
 
                 <div class="text-sm sm:text-lg text-center w-full text-white font-medium tracking-wide">
-                    Streamline Your Workflow with Our List of AI tools <br />
-                    Find Your Perfect Solution!
+                    Optimiza con nuestras herramientas de IA. <br />
+                    ¡Encuentra la solución perfecta!
                 </div>
 
                 <button @click="router.push('/search')" class="flex w-full justify-center items-center lg:-mt-10">
                     <p
                         class="text-[#f7ffdd] bg-[#272727] outline-none py-3 pl-5 rounded-l-md lg:w-[26rem] capitalize text-sm w-full sm:text-xl placeholder:text-[#A3A3A3]">
-                        Type to Search for over 1500+ tools</p>
+                        Busca entre más de 1500 herramientas.</p>
                     <div type="submit"
                         class="h-11 w-12 sm:h-[52px] sm:w-[60px] rounded-r-md flex items-center justify-center bg-[#f7ffdd]">
                         <img src="@/assets/icons/search-black.svg" class="h-5 w-5 sm:h-7 sm:w-7" alt="" />

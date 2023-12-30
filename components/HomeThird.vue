@@ -3,17 +3,17 @@
         class="w-full px-5 xl:px-6 h-screen hidden lg:flex flex-col justify-between overflow-x-clip py-10">
         <div class="flex justify-between items-end">
             <div class="xl:space-y-2 2xl:space-y-4">
-                <h2 class="text-white lg:text-3xl xl:text-3xl 2xl:text-4xl font-bold">Featured <span
-                        class="bg-gradient-to-r from-[#595CFF] to-[#FFC6C6] bg-clip-text text-gradient-animation text-transparent">Tools</span>
+                <h2 class="text-white lg:text-3xl xl:text-3xl 2xl:text-4xl font-bold">Herramientas<span
+                        class="bg-gradient-to-r from-[#595CFF] to-[#FFC6C6] bg-clip-text text-gradient-animation text-transparent">destacadas</span>
                 </h2>
                 <div class="flex items-center gap-x-10">
-                    <p class="text-white text-xl capitalize">Discoverd The Most View Ai tools</p>
+                    <p class="text-white text-xl capitalize">Descubre las herramientas de IA más vistas.</p>
                     <div class="w-40 h-1.5 rounded-lg bg-[#CCCCCC]">
                         <div ref="scrollProgress" class="rounded-lg h-full bg-[#F7FFDD] w-[20%]"></div>
                     </div>
                 </div>
             </div>
-            <div class="text-white font-medium">Scroll to Explore</div>
+            <div class="text-white font-medium">Desplácese hasta Explorar</div>
         </div>
 
         <ul ref="scrollStuff"

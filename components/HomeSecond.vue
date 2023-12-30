@@ -11,15 +11,16 @@
 
                 <div class="text-white mt-7 sm:mt-12">
                     <h3 class="text-2xl sm:text-4xl font-semibold text-[#BDD9BF]">
-                        Text Apps
+                        Texto
                     </h3>
                     <p class="text-[#506C52] font-medium mt-3">
-                        Explore powerful AI text tools for enhanced content creation and analysis.
+                        Descubre herramientas de texto AI para potenciar la creación y análisis de contenido.
                     </p>
                 </div>
             </NuxtLink>
 
-            <NuxtLink to="/categories/category/imagen" class="bg-[#090909] bg-opacity-20 backdrop-blur-lg p-5 sm:p-7 rounded-lg">
+            <NuxtLink to="/categories/category/imagen"
+                class="bg-[#090909] bg-opacity-20 backdrop-blur-lg p-5 sm:p-7 rounded-lg">
                 <div class="flex items-center justify-between w-full">
                     <img src="@/assets/icons/image-app.svg" class="h-16 sm:h-20" alt="">
                     <img src="@/assets/icons/arrow-up-right-image-apps.svg" class="h-10 sm:h-14" alt="">
@@ -27,15 +28,16 @@
 
                 <div class="text-white mt-7 sm:mt-12">
                     <h3 class="text-2xl sm:text-4xl font-semibold text-[#B6B8D6]">
-                        Image Apps
+                        Imagen
                     </h3>
                     <p class="text-[#7E78D2] font-medium mt-3">
-                        Discover cutting-edge AI image processing tools for creative and analytical tasks.
+                        Explora herramientas AI para imágenes creativas y análisis avanzado.
                     </p>
                 </div>
             </NuxtLink>
 
-            <NuxtLink to="/categories/category/código" class="bg-[#090909] bg-opacity-20 backdrop-blur-lg p-5 sm:p-7 rounded-lg">
+            <NuxtLink to="/categories/category/código"
+                class="bg-[#090909] bg-opacity-20 backdrop-blur-lg p-5 sm:p-7 rounded-lg">
                 <div class="flex items-center justify-between w-full">
                     <img src="@/assets/icons/code-app.svg" class="h-16 sm:h-20" alt="">
                     <img src="@/assets/icons/arrow-up-right-code-apps.svg" class="h-10 sm:h-14" alt="">
@@ -43,15 +45,16 @@
 
                 <div class="text-white mt-7 sm:mt-12">
                     <h3 class="text-2xl sm:text-4xl font-semibold text-[#FDBCB4]">
-                        Code Apps
+                        Código
                     </h3>
                     <p class="text-[#FE6F5E] font-medium mt-3">
-                        Access AI-powered coding tools to streamline development and boost productivity.
+                        Usa herramientas AI para codificar más rápido y ser más productivo.
                     </p>
                 </div>
             </NuxtLink>
 
-            <NuxtLink to="/categories/category/audio" class="bg-[#090909] bg-opacity-20 backdrop-blur-lg p-5 sm:p-7 rounded-lg">
+            <NuxtLink to="/categories/category/audio"
+                class="bg-[#090909] bg-opacity-20 backdrop-blur-lg p-5 sm:p-7 rounded-lg">
                 <div class="flex items-center justify-between w-full">
                     <img src="@/assets/icons/audio-app.svg" class="h-16 sm:h-20" alt="">
                     <img src="@/assets/icons/arrow-up-right-audio-apps.svg" class="h-10 sm:h-14" alt="">
@@ -62,12 +65,13 @@
                         Audio Apps
                     </h3>
                     <p class="text-[#7C3AED] font-medium mt-3">
-                        Immerse yourself in AI-driven audio tools for a rich and dynamic experience.
+                        Explora herramientas de audio con IA para una experiencia envolvente.
                     </p>
                 </div>
             </NuxtLink>
 
-            <NuxtLink to="/categories/category/vídeo" class="bg-[#090909] bg-opacity-20 backdrop-blur-lg p-5 sm:p-7 rounded-lg">
+            <NuxtLink to="/categories/category/vídeo"
+                class="bg-[#090909] bg-opacity-20 backdrop-blur-lg p-5 sm:p-7 rounded-lg">
                 <div class="flex items-center justify-between w-full">
                     <img src="@/assets/icons/video-app.svg" class="h-16 sm:h-20" alt="">
                     <img src="@/assets/icons/arrow-up-right-video-apps.svg" class="h-10 sm:h-14" alt="">
@@ -78,12 +82,13 @@
                         Video Apps
                     </h3>
                     <p class="text-[#F43F5E] font-medium mt-3">
-                        Elevate your video creation with AI-powered tools designed for efficiency and creativity.
+                        Potencia tu creación de videos con herramientas impulsadas por IA para eficiencia y creatividad.
                     </p>
                 </div>
             </NuxtLink>
 
-            <NuxtLink to="/categories/category/3d" class="bg-[#090909] bg-opacity-20 backdrop-blur-lg p-5 sm:p-7 rounded-lg">
+            <NuxtLink to="/categories/category/3d"
+                class="bg-[#090909] bg-opacity-20 backdrop-blur-lg p-5 sm:p-7 rounded-lg">
                 <div class="flex items-center justify-between w-full">
                     <img src="@/assets/icons/3d-app.svg" class="h-16 sm:h-20" alt="">
                     <img src="@/assets/icons/arrow-up-right-3d-apps.svg" class="h-10 sm:h-14" alt="">
@@ -94,12 +99,13 @@
                         3D Apps
                     </h3>
                     <p class="text-[#3B82F6] font-medium mt-3">
-                        Dive into the world of AI-driven 3D applications for immersive and interactive experiences.
+                        Explora aplicaciones 3D con IA para experiencias inmersivas e interactivas.
                     </p>
                 </div>
             </NuxtLink>
 
-            <NuxtLink to="/categories/category/negocios" class="bg-[#090909] bg-opacity-20 backdrop-blur-lg p-5 sm:p-7 rounded-lg">
+            <NuxtLink to="/categories/category/negocios"
+                class="bg-[#090909] bg-opacity-20 backdrop-blur-lg p-5 sm:p-7 rounded-lg">
                 <div class="flex items-center justify-between w-full">
                     <img src="@/assets/icons/business-app.svg" class="h-16 sm:h-20" alt="">
                     <img src="@/assets/icons/arrow-up-right-business-apps.svg" class="h-10 sm:h-14" alt="">
@@ -107,16 +113,17 @@
 
                 <div class="text-white mt-7 sm:mt-12">
                     <h3 class="text-2xl sm:text-4xl font-semibold text-[#E5E5E5]">
-                        Business Apps
+                        Negocios
                     </h3>
                     <p class="text-[#3F3F46] font-medium mt-3">
-                        Unleash the power of AI in business applications for enhanced efficiency and strategic
-                        decision-making.
+                        Libera el poder de la IA en aplicaciones empresariales para mayor eficiencia y toma de decisiones
+                        estratégicas.
                     </p>
                 </div>
             </NuxtLink>
 
-            <NuxtLink to="/categories/category/other" class="bg-[#090909] bg-opacity-20 backdrop-blur-lg p-5 sm:p-7 rounded-lg">
+            <NuxtLink to="/categories/category/other"
+                class="bg-[#090909] bg-opacity-20 backdrop-blur-lg p-5 sm:p-7 rounded-lg">
                 <div class="flex items-center justify-between w-full">
                     <img src="@/assets/icons/other-app.svg" class="h-16 sm:h-20" alt="">
                     <img src="@/assets/icons/arrow-up-right-other-apps.svg" class="h-10 sm:h-14" alt="">
@@ -124,11 +131,11 @@
 
                 <div class="text-white mt-7 sm:mt-12">
                     <h3 class="text-2xl sm:text-4xl font-semibold text-[#D1FAE5]">
-                        Other Apps
+                        Otras
                     </h3>
                     <p class="text-[#059669] font-medium mt-3">
-                        Explore a variety of AI tools that don't fit into specific categories, offering unique
-                        functionalities and applications.
+                        Descubre diversas herramientas de IA fuera de categorías específicas, con funcionalidades y
+                        aplicaciones únicas.
                     </p>
                 </div>
             </NuxtLink>

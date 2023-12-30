@@ -12,19 +12,19 @@
                 <button
                     class="bg-[#272727] font-medium hidden  lg:flex items-center gap-x-2 text-[#F7FFDD] py-2 pl-5 pr-7 rounded-3xl">
                     <img src="@/assets/icons/google-colored.svg" class="h-5 w-5" alt="">
-                    <NuxtLink to="/login">Login</NuxtLink>
+                    <NuxtLink to="/login">Acceso</NuxtLink>
                 </button>
             </div>
 
             <button v-else
                 class="bg-[#272727] font-medium hidden  lg:flex items-center gap-x-2 text-[#F7FFDD] py-2 pl-5 pr-7 rounded-3xl">
                 <img src="@/assets/icons/bookmark.svg" class="h-5 w-5" alt="">
-                <NuxtLink to="/bookmarks">Bookmarks</NuxtLink>
+                <NuxtLink to="/bookmarks">Marcadores</NuxtLink>
             </button>
             <button @click="router.push('/search')" :class="{ '!opacity-0 !hidden': menuState }"
                 class="bg-[#272727] font-medium hidden lg:flex transition-all duration-700 opacity-100 items-center gap-x-3 text-[#F7FFDD] py-2 pl-5 pr-12 rounded-3xl">
                 <img src="@/assets/icons/search.svg" class="h-5 w-5" alt="">
-                <span>Search</span>
+                <span>Buscar</span>
             </button>
             <img src="@/assets/icons/plus.svg" :class="{ 'rotate-45': menuState }" @click="handleMenuToggle"
                 class=" h-10 w-10 bg-[#272727] rounded-full transition-all duration-1000 p-1 cursor-pointer lg:hover:opacity-70 lg:active:opacity-90"

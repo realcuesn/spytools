@@ -12,11 +12,11 @@
                         <img :src="getAvatarUrl(product.avatar)" class="h-12 w-12 sm:h-14 sm:w-14" alt="">
                         <div class="flex justify-center flex-col">
                             <h2 class="text-white text-base sm:text-lg font-medium">{{ product.title }}</h2>
-                            <p v-if="product.pricing_type == 'Free'"
+                            <p v-if="product.pricing_type.toLowerCase() == 'Gratis'.toLowerCase()"
                                 class="bg-[#BDD9BF] text-[#506C52] font-semibold text-xs py-1 px-2 text-center sm:px-3 rounded-md">
                                 {{ product.pricing_type }}
                             </p>
-                            <p v-else-if="product.pricing_type == 'Freemium'"
+                            <p v-else-if="product.pricing_type.toLowerCase() == 'Prueba Gratis'.toLowerCase()"
                                 class="bg-amber-100 text-amber-500 font-semibold text-xs py-1 px-2 text-center sm:px-3 rounded-md">
                                 {{ product.pricing_type }}
                             </p>

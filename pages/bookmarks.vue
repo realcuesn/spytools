@@ -2,7 +2,7 @@
     <div class="pt-20 px-5 xl:px-6">
         <h2
             class="my-10 text-4xl px-2 xl:my-20 font-semibold bg-gradient-to-r from-[#595CFF] to-[#FFC6C6] bg-clip-text text-gradient-animation text-transparent">
-            Bookmarks
+            Marcadores
         </h2>
         <div class="flex items-center justify-center">
             <h2 class="text-2xl">{{ name }}</h2>
