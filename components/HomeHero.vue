@@ -68,7 +68,7 @@
           class="flex w-full justify-center items-center lg:-mt-10"
         >
           <p
-            class="text-[#f7ffdd] bg-[#272727] outline-none py-3 pl-5 rounded-l-md lg:w-[26rem] capitalize text-sm w-full sm:text-xl placeholder:text-[#A3A3A3]"
+            class="text-[#f7ffdd] bg-[#272727] outline-none py-3 pl-5 rounded-l-md lg:w-[26rem] capitalize text-sm w-full sm:text-lg placeholder:text-[#A3A3A3]"
           >
             Escribe concretamente lo que necesitas...
           </p>
