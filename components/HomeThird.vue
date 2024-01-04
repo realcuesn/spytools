@@ -9,7 +9,8 @@
         <h2 class="text-white lg:text-3xl xl:text-3xl 2xl:text-4xl font-bold">
           Herramientas<span
             class="bg-gradient-to-r from-[#595CFF] to-[#FFC6C6] bg-clip-text text-gradient-animation text-transparent"
-            >destacadas</span
+          >
+            destacadas</span
           >
         </h2>
         <div class="flex items-center gap-x-10">
@@ -36,6 +37,7 @@
       >
         <NuxtLink
           :to="`/tools/${productList[0].tool_id}`"
+          target="_blank"
           class="row-span-2 w-full"
         >
           <img
@@ -47,6 +49,7 @@
         <div class="p-5">
           <NuxtLink
             :to="`/tools/${productList[0].tool_id}`"
+            target="_blank"
             class="flex w-full items-center justify-between"
           >
             <div class="flex gap-x-2 items-center">
@@ -71,6 +74,7 @@
             <NuxtLink
               v-if="productList[0].url"
               :to="productList[0].url"
+              target="_blank"
               class="flex items-center lg:py-1 xl:py-1 xl:pl-3 xl:pr-4 2xl:py-2 pl-4 pr-5 bg-gradient-to-r gap-x-1 from-[#595CFF] button-gradient-animation rounded-md to-[#F7FFDD]"
             >
               <img
@@ -117,6 +121,7 @@
       >
         <NuxtLink
           :to="`/tools/${productList[1].tool_id}`"
+          target="_blank"
           class="row-span-2 w-full"
         >
           <img
@@ -128,6 +133,7 @@
         <div class="p-5">
           <NuxtLink
             :to="`/tools/${productList[1].tool_id}`"
+            target="_blank"
             class="flex w-full items-center justify-between"
           >
             <div class="flex gap-x-2 items-center">
@@ -152,6 +158,7 @@
             <NuxtLink
               v-if="productList[1].url"
               :to="productList[1].url"
+              target="_blank"
               class="flex items-center lg:py-1 xl:py-1 xl:pl-3 xl:pr-4 2xl:py-2 pl-4 pr-5 bg-gradient-to-r gap-x-1 from-[#595CFF] button-gradient-animation rounded-md to-[#F7FFDD]"
             >
               <img
@@ -198,6 +205,7 @@
       >
         <NuxtLink
           :to="`/tools/${productList[2].tool_id}`"
+          target="_blank"
           class="row-span-2 w-full"
         >
           <img
@@ -209,6 +217,7 @@
         <div class="p-5">
           <NuxtLink
             :to="`/tools/${productList[2].tool_id}`"
+            target="_blank"
             class="flex w-full items-center justify-between"
           >
             <div class="flex gap-x-2 items-center">
@@ -233,6 +242,7 @@
             <NuxtLink
               v-if="productList[2].url"
               :to="productList[2].url"
+              target="_blank"
               class="flex items-center lg:py-1 xl:py-1 xl:pl-3 xl:pr-4 2xl:py-2 pl-4 pr-5 bg-gradient-to-r gap-x-1 from-[#595CFF] button-gradient-animation rounded-md to-[#F7FFDD]"
             >
               <img
@@ -279,6 +289,7 @@
       >
         <NuxtLink
           :to="`/tools/${productList[3].tool_id}`"
+          target="_blank"
           class="row-span-2 w-full"
         >
           <img
@@ -290,6 +301,7 @@
         <div class="p-5">
           <NuxtLink
             :to="`/tools/${productList[3].tool_id}`"
+            target="_blank"
             class="flex w-full items-center justify-between"
           >
             <div class="flex gap-x-2 items-center">
@@ -314,6 +326,7 @@
             <NuxtLink
               v-if="productList[3].url"
               :to="productList[3].url"
+              target="_blank"
               class="flex items-center lg:py-1 xl:py-1 xl:pl-3 xl:pr-4 2xl:py-2 pl-4 pr-5 bg-gradient-to-r gap-x-1 from-[#595CFF] button-gradient-animation rounded-md to-[#F7FFDD]"
             >
               <img
@@ -404,7 +417,11 @@
           v-if="productList.length > 0"
           class="w-[94vw] min-w-[94vw] rounded-xl bg-[#141414] relative flex h-full flex-col overflow-clip grid-rows-3"
         >
-          <NuxtLink :to="`/tools/${product.tool_id}`" class="row-span-2 w-full">
+          <NuxtLink
+            :to="`/tools/${product.tool_id}`"
+            target="_blank"
+            class="row-span-2 w-full"
+          >
             <img
               :src="getImageUrl(product.image)"
               class="w-full aspect-video object-cover"
@@ -415,6 +432,7 @@
             <div class="flex w-full items-center justify-between">
               <NuxtLink
                 :to="`/tools/${product.tool_id}`"
+                target="_blank"
                 class="flex gap-x-2 items-center"
               >
                 <img
@@ -436,6 +454,7 @@
               <NuxtLink
                 v-if="product.url"
                 :to="product.url"
+                target="_blank"
                 class="flex items-center py-2 pl-4 pr-5 bg-gradient-to-r gap-x-1 from-[#595CFF] button-gradient-animation rounded-md to-[#F7FFDD]"
               >
                 <img
