@@ -65,6 +65,7 @@ const name = ref('')
 const productList = ref([])
 const user = useSupabaseUser()
 const bookmarks = useState('bookmarks')
+const router = useRouter()
 const imageEndUrlEndPoint = 'https://zzjfupocbypxhqvlygyf.supabase.co/storage/v1/object/public/'
 const getImageUrl = (image) => {
     //ii avatar has placehold.co in it, return it as it is
@@ -89,6 +90,10 @@ const getAvatarUrl = (avatar) => {
 }
 
 const toggleBookmark = async (tool_id) => {
+    if (!user.value) {
+        router.push('/login')
+        return
+    }
     //now add the bookmark to the bookmarks array if it doesn't exist and also delete and remove it if it does exist and update the UI and also don't forget to update the supabase database also remember we use user_id propery which is the same as the user id in the supabase database.
     if (bookmarks.value.includes(tool_id)) {
         //remove the bookmark
