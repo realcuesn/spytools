@@ -26,6 +26,12 @@
             class="text-[#f7ffdd] bg-[#272727] outline-none py-3 pl-5 rounded-md w-full lowercase text-xl placeholder:text-[#A3A3A3]"
             placeholder="" />
         </div>
+        <div class="mt-5 w-full space-y-2">
+          <label class="block text-base uppercase" for="confirm-password"> Confirmar contraseña</label>
+          <input v-model="confirmPassword" type="password"
+            class="text-[#f7ffdd] bg-[#272727] outline-none py-3 pl-5 rounded-md w-full lowercase text-xl placeholder:text-[#A3A3A3]"
+            placeholder="" />
+        </div>
         <!--                 already have an account -->
         <div class="mt-4 text-lg mx-auto w-fit">
           ¿Ya tienes una cuenta?
@@ -53,9 +59,14 @@
 const email = ref("");
 const username = ref("");
 const password = ref("");
+const confirmPassword = ref("");
 const client = useSupabaseClient();
 const router = useRouter();
 const register = async () => {
+  if (password.value !== confirmPassword.value) {
+    alert("Las contraseñas no coinciden");
+    return;
+  }
   let { data, error } = await client.auth.signUp({
     email: email.value,
     password: password.value,
