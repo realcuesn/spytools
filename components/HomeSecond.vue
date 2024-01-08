@@ -131,7 +131,7 @@
 
                 <div class="text-white mt-7 sm:mt-12">
                     <h3 class="text-2xl sm:text-4xl font-semibold text-[#ec4899]">
-                        Students
+                        Productividad
                     </h3>
                     <p class="text-[#ec4899] font-medium mt-3">
                         Descubre diversas herramientas de IA fuera de categorías específicas, con funcionalidades y
@@ -149,7 +149,7 @@
                 </div>
 
                 <div class="text-white mt-7 sm:mt-12">
-                    <h3 class="text-2xl sm:text-4xl font-semibold text-[#ec4899]">
+                    <h3 class="text-2xl sm:text-4xl font-semibold text-[#818CF8]">
                         Students
                     </h3>
                     <p class="text-[#ec4899] font-medium mt-3">
