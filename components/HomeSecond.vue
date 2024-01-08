@@ -122,6 +122,43 @@
                 </div>
             </NuxtLink>
 
+            <NuxtLink to="/categories/category/productividad"
+                class="bg-[#090909] bg-opacity-20 backdrop-blur-lg p-5 sm:p-7 rounded-lg">
+                <div class="flex items-center justify-between w-full">
+                    <img src="@/assets/icons/productivity-app.svg" class="h-16 sm:h-20" alt="">
+                    <img src="@/assets/icons/arrow-up-right-other-apps.svg" class="h-10 sm:h-14" alt="">
+                </div>
+
+                <div class="text-white mt-7 sm:mt-12">
+                    <h3 class="text-2xl sm:text-4xl font-semibold text-[#ec4899]">
+                        Students
+                    </h3>
+                    <p class="text-[#ec4899] font-medium mt-3">
+                        Descubre diversas herramientas de IA fuera de categorías específicas, con funcionalidades y
+                        aplicaciones únicas.
+                    </p>
+                </div>
+            </NuxtLink>
+
+
+            <NuxtLink to="/categories/category/students"
+                class="bg-[#090909] bg-opacity-20 backdrop-blur-lg p-5 sm:p-7 rounded-lg">
+                <div class="flex items-center justify-between w-full">
+                    <img src="@/assets/icons/students-app.svg" class="h-16 sm:h-20" alt="">
+                    <img src="@/assets/icons/arrow-up-right-other-apps.svg" class="h-10 sm:h-14" alt="">
+                </div>
+
+                <div class="text-white mt-7 sm:mt-12">
+                    <h3 class="text-2xl sm:text-4xl font-semibold text-[#ec4899]">
+                        Students
+                    </h3>
+                    <p class="text-[#ec4899] font-medium mt-3">
+                        Descubre diversas herramientas de IA fuera de categorías específicas, con funcionalidades y
+                        aplicaciones únicas.
+                    </p>
+                </div>
+            </NuxtLink>
+
             <NuxtLink to="/categories/category/other"
                 class="bg-[#090909] bg-opacity-20 backdrop-blur-lg p-5 sm:p-7 rounded-lg">
                 <div class="flex items-center justify-between w-full">
@@ -139,6 +176,7 @@
                     </p>
                 </div>
             </NuxtLink>
+
         </ul>
     </div>
 </template>
