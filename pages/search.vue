@@ -5,7 +5,7 @@
         <input
           class="text-[#f7ffdd] bg-[#272727] outline-none py-3 pl-3 text-left rounded-l-md capitalize text-sm w-full sm:text-xl placeholder:text-[#A3A3A3]"
           type="text"
-          placeholder="Escribe concretamente lo que necesitas"
+          placeholder="Ejemplo: 'Podcast', 'SEO'"
           v-model="textValue"
         />
         <button
