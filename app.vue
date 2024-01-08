@@ -35,6 +35,7 @@ if (typeof window !== 'undefined') {
   gsap.registerPlugin(ScrollTrigger);
 }
 
+
 const isLoaded = ref(false)
 
 onMounted(async () => {
