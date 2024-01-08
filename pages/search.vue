@@ -98,6 +98,7 @@
 
               <NuxtLink
                 :to="product.url"
+                target="_blank"
                 class="flex items-center py-2 pl-4 pr-5 bg-gradient-to-r gap-x-1 from-[#595CFF] button-gradient-animation rounded-md to-[#F7FFDD]"
               >
                 <img
