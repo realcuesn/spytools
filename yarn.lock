@@ -637,6 +637,11 @@
     "@floating-ui/dom" "^1.4.5"
     vue-demi ">=0.13.0"
 
+"@hotjar/browser@^1.0.9":
+  version "1.0.9"
+  resolved "https://registry.yarnpkg.com/@hotjar/browser/-/browser-1.0.9.tgz#769b4ded3fa7b9557b785c107f0cd76d3f83789a"
+  integrity sha512-n9akDMod8BLGpYEQCrHwlYWWd63c1HlhUSXNIDfClZtKYXbUjIUOFlNZNNcUxgHTCsi4l2i+SWKsGsO0t93S8w==
+
 "@iconify-json/carbon@^1.1.24":
   version "1.1.25"
   resolved "https://registry.yarnpkg.com/@iconify-json/carbon/-/carbon-1.1.25.tgz#edcf7c613457534fd2e880ac9dc34f7e79c38b85"

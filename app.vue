@@ -23,7 +23,10 @@
 <script setup>
 import Lenis from '@studio-freight/lenis'
 import gsap from "gsap";
+import Hotjar from '@hotjar/browser';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+const siteId = 3817835;
+const hotjarVersion = 6;
 const menuAnimateState = useState('menu-animate', () => false)
 const menuState = useState('menu', () => false)
 const open = useState('searchOpen', () => false)
@@ -35,6 +38,7 @@ if (typeof window !== 'undefined') {
 const isLoaded = ref(false)
 
 onMounted(async () => {
+  Hotjar.init(siteId, hotjarVersion);
   const lenis = new Lenis()
 
   lenis.on('scroll', ScrollTrigger.update)

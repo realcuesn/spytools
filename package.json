@@ -25,6 +25,7 @@
     "vue-router": "^4.2.5"
   },
   "dependencies": {
+    "@hotjar/browser": "^1.0.9",
     "@nuxtjs/tailwindcss": "^6.10.1",
     "@studio-freight/lenis": "^1.0.29",
     "@vueuse/core": "^10.7.0",
