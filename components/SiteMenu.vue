@@ -24,7 +24,7 @@
               to="/bookmarks"
               class="font-semibold"
             >
-              Marcadores
+              Guardados
             </NuxtLink>
           </div>
         </div>
@@ -37,16 +37,6 @@
             >
               Categorías
             </NuxtLink>
-          </div>
-        </div>
-        <div class="overflow-y-clip">
-          <div ref="linkFour">
-            <a
-              @click="menuAnimateState = true"
-              href="/sitemap.xml"
-              class="font-semibold"
-              >Mapa del sitio
-            </a>
           </div>
         </div>
         <div class="overflow-y-clip hidden">

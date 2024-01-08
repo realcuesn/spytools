@@ -19,7 +19,7 @@
             <button v-else
                 class="bg-[#272727] font-medium hidden  lg:flex items-center gap-x-2 text-[#F7FFDD] py-2 pl-5 pr-7 rounded-3xl">
                 <img src="@/assets/icons/bookmark.svg" class="h-5 w-5" alt="">
-                <NuxtLink to="/bookmarks">Marcadores</NuxtLink>
+                <NuxtLink to="/bookmarks">Guardados</NuxtLink>
             </button>
             <button @click="router.push('/search')" :class="{ '!opacity-0 !hidden': menuState }"
                 class="bg-[#272727] font-medium hidden lg:flex transition-all duration-700 opacity-100 items-center gap-x-3 text-[#F7FFDD] py-2 pl-5 pr-12 rounded-3xl">
