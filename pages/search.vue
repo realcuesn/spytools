@@ -5,7 +5,7 @@
         <input
           class="text-[#f7ffdd] bg-[#272727] outline-none py-3 pl-3 text-left rounded-l-md capitalize text-sm w-full sm:text-xl placeholder:text-[#A3A3A3]"
           type="text"
-          placeholder="Type to Search for over 1500+ tools"
+          placeholder="Escribe concretamente lo que necesitas"
           v-model="textValue"
         />
         <button
