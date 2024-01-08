@@ -9,7 +9,7 @@
                 <li v-for="product in productList" :key="product.id"
                     class=" w-full rounded-lg sm:rounded-xl bg-[#141414] flex flex-col overflow-clip">
                     <div class="row-span-2 aspect-video w-full relative">
-                        <NuxtLink :to="`/tools/${product.tool_id}`" class="h-full w-full">
+                        <NuxtLink :to="`/tools/${product.tool_id}`" target="_blank" class="h-full w-full">
                             <img :src="getImageUrl(product.image)" class="h-full w-full aspect-video object-cover" alt="">
                         </NuxtLink>
                         <div class="absolute top-5 right-5">
@@ -22,7 +22,7 @@
                     </div>
                     <div class=" p-2 pt-4 sm:p-6 lg:p-5">
                         <div class="flex w-full items-center justify-between">
-                            <NuxtLink :to="`/tools/${product.tool_id}`" class="flex gap-x-2 items-center">
+                            <NuxtLink :to="`/tools/${product.tool_id}`" target="_blank" class="flex gap-x-2 items-center">
                                 <img :src="getAvatarUrl(product.avatar)" class="h-12 w-12 sm:h-14 sm:w-14" alt="">
                                 <div class="flex justify-center flex-col">
                                     <h2 class="text-white text-base sm:text-lg font-medium">{{ product.title }}</h2>
@@ -42,7 +42,7 @@
                             </NuxtLink>
 
 
-                            <NuxtLink :to="product.url"
+                            <NuxtLink :to="product.url" target="_blank"
                                 class="flex items-center py-2 pl-4 pr-5 bg-gradient-to-r gap-x-1 from-[#595CFF] button-gradient-animation rounded-md to-[#F7FFDD]">
                                 <img src="@/assets/icons/arrow-up-right.svg" class="h-6 w-6" alt="">
                                 <span class="font-semibold">Visit</span>
