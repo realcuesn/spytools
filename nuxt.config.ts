@@ -24,7 +24,7 @@ export default defineNuxtConfig({
   app: {
     pageTransition: false,
     head: {
-      title: "Spytools - AI Tools for Everyone",
+      title: "Spytools - IA para todos",
     },
   },
   gtag: {
