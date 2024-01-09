@@ -6,7 +6,7 @@
       <div class="flex sm:hidden mx-auto items-center">
         <NuxtLink
           to="/categories"
-          class="text-[#F7FFDD] font-medium bg-[#272727] px-6 rounded-md py-2"
+          class="text-[#F7FFDD] font-medium bg-[#272727] px-6 rounded-md"
           >Categorías</NuxtLink
         >
       </div>
