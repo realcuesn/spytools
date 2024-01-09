@@ -195,8 +195,8 @@
             Productividad
           </h3>
           <p class="text-[#ec4899] font-medium mt-3">
-            Descubre diversas herramientas de IA fuera de categorías
-            específicas, con funcionalidades y aplicaciones únicas.
+            Aumenta tu productividad, y aumenta tus resultados con las mejores
+            herramientas.
           </p>
         </div>
       </NuxtLink>
@@ -223,8 +223,8 @@
             Estudiantes
           </h3>
           <p class="text-[#818CF8] font-medium mt-3">
-            Descubre diversas herramientas de IA fuera de categorías
-            específicas, con funcionalidades y aplicaciones únicas.
+            Mejora tu rendimiento académico gracias a la nueva tecnología
+            (resumidor, presentaciones, matemáticas...)
           </p>
         </div>
       </NuxtLink>
