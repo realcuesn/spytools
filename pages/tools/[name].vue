@@ -87,7 +87,7 @@
                 alt=""
               />
               <span class="text-xs lg:text-sm 2xl:text-base font-semibold"
-                >Guardar</span
+                >Guardado</span
               >
             </button>
 
@@ -102,7 +102,7 @@
                 alt=""
               />
               <span class="text-sm lg:text-sm 2xl:text-base font-semibold"
-                >Guardado</span
+                >Guardar</span
               >
             </button>
           </div>
